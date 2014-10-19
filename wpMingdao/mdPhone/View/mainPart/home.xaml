@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="mdPhone.View.mainPart.home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c4f="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls" 
+	xmlns:slToolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="720" d:DesignWidth="480" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+
+
+        <Grid x:Name="ContentPanel"  Grid.Row="1" HorizontalAlignment="Center" FlowDirection="LeftToRight">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Grid.Column="0" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="95"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Name="uerImg" Width="64" Margin="0,5,0,0" Height="64" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="0"  Source="/Images/mainIcon/Assignment.png" MouseLeftButtonUp="uerImg_MouseLeftButtonUp"  />
+                    <TextBlock Name="userName"  HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" FontSize="24" Text="mingdao"  Margin="10,5,0,0" Foreground="White" />
+                    <TextBlock Name="companyName"  HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" FontSize="24" Text="应用"  Margin="10,35,0,0" Foreground="White" />
+                </Grid>
+            </StackPanel>
+
+
+            <slToolkit:WrapPanel Grid.Row="1" Grid.Column="0" slToolkit:TiltEffect.IsTiltEnabled="True" HorizontalAlignment="Center">
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" >
+                    <c4f:Tile Name="post" 
+                            Margin="25, 0, 12, 0"
+                            Width="200"
+                            Height="200"
+                            
+                            Title="动态更新" Foreground="White" BorderBrush="Red" Click="post_Click">
+                        <Image Source="/Images/mainIcon/post.png" Width="120" />
+                    </c4f:Tile>
+                    <c4f:Tile Name="po1st"
+                            Margin="0, 0, 12, 0"
+                            Width="200"
+                            Height="200"
+                            
+                            Title="知识中心" BorderBrush="Red" Foreground="White" TabNavigation="Cycle">
+                        <Image Source="/Images/mainIcon/Assignment.png" Width="120" />
+                    </c4f:Tile>
+
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0" Grid.Row="1" >
+                    <c4f:Tile 
+                            Margin="25, 0, 12, 0"
+                            Width="200"
+                             Height="200"
+                            
+                            Title="任务中心" BorderBrush="Red"  Foreground="White" TabNavigation="Cycle" Click="Tile_Click">
+                        <Image Source="/Images/mainIcon/task.png" Width="120" />
+                    </c4f:Tile>
+                    <c4f:Tile 
+                            Margin="0, 0, 12, 0"
+                            Width="200"
+                            Height="200" 
+                            Title="日程中心" BorderBrush="Red" Foreground="White" TabNavigation="Cycle" Click="Tile_Click_1">
+                        <Image Source="/Images/mainIcon/calendar.png" Width="120" />
+                    </c4f:Tile>
+
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.Row="1" >
+                    <c4f:Tile  
+                            Margin="0,12,12,0"
+                            Width="143"
+                            Height="143"
+                            Title="通讯录" BorderBrush="Red" Foreground="White" TabNavigation="Cycle">
+                        <Image VerticalAlignment="Top" Margin="0,20,0,0" Source="/Images/mainIcon/addressList.png" Height="80" Width="80" />
+                    </c4f:Tile>
+                    <c4f:Tile 
+                            Margin="0,12,12,0"
+                            Width="143"
+                             Height="143"
+                            Title="群组" BorderBrush="Red" Foreground="White" TabNavigation="Cycle">
+                        <Image VerticalAlignment="Top" Margin="0,20,0,0" Source="/Images/mainIcon/group.png" Height="90" Width="90" />
+                    </c4f:Tile>
+                    <c4f:Tile  
+                            Margin="0,12,12,0"
+                            Width="143" 
+                            Title="我的应用" BorderBrush="Red" Foreground="White" TabNavigation="Cycle">
+                        <Image VerticalAlignment="Top" Margin="0,20,0,0" Source="/Images/mainIcon/myapplition.png" Height="90" Width="90" />
+                    </c4f:Tile>
+                </StackPanel>
+
+
+
+
+
+            </slToolkit:WrapPanel>
+        </Grid>
+
+
+
+
+
+    </Grid>
+</UserControl>

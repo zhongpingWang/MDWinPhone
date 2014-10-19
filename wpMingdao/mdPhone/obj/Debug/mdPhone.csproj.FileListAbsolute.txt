@@ -1,0 +1,340 @@
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\mdPhone.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\mdPhone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\App.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.g.resources
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.Resources.AppResources.resources
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.csproj.GenerateResource.Cache
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\XapCacheFile.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\Login.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.xml
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.pdb
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\MainPage.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\post\Post.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.Toolkit.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.dll
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\about\about.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\apps\knowledge\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\apps\taskcenter\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\user\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\detail.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\TestPage\controlTest.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\View\TestPage\scrollLoad.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\Controls\ListBox2\ListBox2.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\mdPhone.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\mdPhone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\AppManifest.xaml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.Toolkit.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Controls.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Filtering.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Bmp.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Gif.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Png.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Utils.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Controls.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Controls.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Filtering.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Filtering.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Bmp.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Bmp.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Gif.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Gif.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Png.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.IO.Png.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Utils.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ImageTools.Utils.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\App.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\Controls\ListBox2\ListBox2.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\Login.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\about\about.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\apps\calendar\detail.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\apps\calendar\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\apps\knowledge\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\apps\taskcenter\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\MainPage.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\post\Post.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\TestPage\controlTest.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\TestPage\scrollLoad.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\user\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\mdPhone.g.resources
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\mdPhone.Resources.AppResources.resources
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\mdPhone.csproj.GenerateResource.Cache
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\mdPhone.dll
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\mdPhone.pdb
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\XapCacheFile.xml
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\main.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\mainPart\create.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\mainPart\home.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\mainPart\msg.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\mainPart\panoramicTile.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\mainPart\search.g.cs
+C:\Users\zhong_000\Desktop\wpMingdao - 副本\mdPhone\obj\Debug\View\post\AddPost.g.cs
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\ApplicationIcon.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\mdPhone.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\mdPhone.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Coding4Fun.Phone.Controls.Toolkit.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ICSharpCode.SharpZLib.Phone.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Controls.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Filtering.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Bmp.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Gif.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.IO.Png.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ImageTools.Utils.xml
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\PhoneCodeContractsAssemblies.pdb
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\App.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\Controls\ListBox2\ListBox2.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\Login.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\about\about.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\detail.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\main.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\apps\knowledge\main.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\apps\taskcenter\main.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\main.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\MainPage.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\mainPart\create.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\mainPart\home.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\mainPart\msg.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\mainPart\panoramicTile.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\mainPart\search.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\post\AddPost.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\post\Post.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\TestPage\controlTest.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\TestPage\scrollLoad.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\View\user\main.g.cs
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.g.resources
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.Resources.AppResources.resources
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.csproj.GenerateResource.Cache
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.dll
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.pdb
+H:\2014\明道\wpMingdao\mdPhone\obj\Debug\XapCacheFile.xml

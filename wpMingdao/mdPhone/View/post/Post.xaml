@@ -1,0 +1,128 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mdPhone.View.Post"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctrls="clr-namespace:mdPhone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:textPostConvert="clr-namespace:mdPhone.Helper"
+    toolkit:TiltEffect.IsTiltEnabled="True" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" Width="480"
+    shell:SystemTray.IsVisible="True">
+
+
+    <!--页面过渡效果-->
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:RotateTransition  Mode="In180Clockwise"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+        <textPostConvert:textConvert x:Key="textConvert" />
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <ProgressBar IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
+            <TextBlock Text="动态更新" Margin="9,-7,0,0" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </StackPanel>
+      
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ProgressBar IsIndeterminate="True" Name="fristLoad"/>
+      
+
+            <ListBox  Name="postListBox" Width="480" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,32,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Image Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
+
+                            <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
+
+                            <TextBlock Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text,Converter={StaticResource textConvert},ConverterParameter=user}" Foreground="#FFFFFF" Cursor="Hand" ></TextBlock>
+                            
+                            <HyperlinkButton Margin="0,25,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
+                            
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+            <!--<ListBox  Name="postsImtes" Width="480" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,32,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Image Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
+
+                            <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
+
+                            <TextBlock Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#ffffff" Cursor="Hand" >
+
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>-->
+
+
+ 
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.8">
+            <shell:ApplicationBarIconButton x:Name="add_post" IconUri="Assets/AppBar/add_post.png"
+                                             
+                                            Text="发表动态" IsEnabled="True" Click="add_post_Click"></shell:ApplicationBarIconButton>
+             
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

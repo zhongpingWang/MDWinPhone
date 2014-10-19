@@ -1,0 +1,124 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mdPhone.View.main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:c4f="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls" 
+	xmlns:slToolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+     Loaded="PhoneApplicationPage_Loaded" 
+    >
+
+    <!--页面过渡效果-->
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+
+    <UserControl.Resources>
+        <Storyboard x:Name="PageChangeAnimation">
+            <DoubleAnimation To="-480.0" SpeedRatio="4" Storyboard.TargetName="PanoramaContentTranslate" Storyboard.TargetProperty="X" />
+            <DoubleAnimation x:Name="SlideTitleDoubleAnimation" SpeedRatio="4" Storyboard.TargetName="TitleTranslate" Storyboard.TargetProperty="X" />
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Width="1920" Background="{StaticResource PhoneBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" x:Name="TitlePanel">
+            <StackPanel.RenderTransform>
+                <TranslateTransform x:Name="TitleTranslate" />
+            </StackPanel.RenderTransform>
+        </StackPanel>
+
+        <Grid x:Name="PanoramicGrid" Grid.Row="1" Grid.Column="0"
+                        ManipulationDelta="PhoneApplicationPage_ManipulationDelta"
+          ManipulationCompleted="PhoneApplicationPage_ManipulationCompleted" >
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="PanoramaContentTranslate" X="-480" Y="0" />
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480" />
+                <ColumnDefinition Width="480" />
+                <ColumnDefinition Width="480" />
+
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+
+        <Grid Name="bar" Grid.Row="1" Canvas.ZIndex="2" Width="480" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Height="70">
+            <Grid.Resources>
+                <ResourceDictionary Source="../OverrideControlStyle\BottomStyle.xaml"></ResourceDictionary>
+            </Grid.Resources>
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.15"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name="btnHome"  Grid.Row="0" Grid.Column="0" BorderBrush="Black" Foreground="Black" Background="Red" Click="btnHome_Click" >
+                <StackPanel>
+                    <Image  Width="48" Source="/Images/mainIcon/homeWhite.png"   />
+                </StackPanel> 
+            </Button>
+
+            <Button Name="btnMessage"  Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" Foreground="Black" Background="Black" Click="btnMessage_Click">
+                <StackPanel>
+                    <Image  Width="48" Source="/Images/mainIcon/msgWhite.png"   />
+                </StackPanel>
+            </Button>
+
+            <Button Name="btnSearch"  Grid.Row="0" Grid.Column="2" BorderBrush="Black" Foreground="Black" Background="Black" Click="btnSearch_Click">
+                <StackPanel>
+                    <Image  Width="48" Source="/Images/mainIcon/searchWhite.png"   />
+                </StackPanel>
+            </Button>
+
+            <Button Name="btnCreate"  Grid.Row="0" Grid.Column="3" BorderBrush="Black" Foreground="Black" Background="Black" Click="btnCreate_Click">
+                <StackPanel>
+                    <Image  Width="48" Source="/Images/mainIcon/createWhite.png"   />
+                </StackPanel>
+            </Button>
+
+           
+
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
