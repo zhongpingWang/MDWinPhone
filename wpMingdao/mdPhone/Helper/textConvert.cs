@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
@@ -15,9 +16,25 @@ namespace mdPhone.Helper
         {
             //value:绑定的值,也就是要进行转换的值      
             //parameter:对应Binding中的ConverterParameter属性,用来传递参数,  
-            //language:对应Binding中的ConverterLanguage属性,用来确定要转换值的语言,一般在全球化应用中使用.     
+            //language:对应Binding中的ConverterLanguage属性,用来确定要转换值的语言,一般在全球化应用中使用.
+            value = ReplaceUser(value.ToString());
             return value;
            
+        }
+
+       /// <summary>
+       ///替换@到的人 
+       /// </summary>
+        private string ReplaceUser(string postMsg)
+        { 
+            return Regex.Replace(postMsg, "###(.+?)###", (m) =>
+             {
+                 string rPost = m.ToString().Replace("#",""); 
+                 string userName = rPost.Split('|')[1];
+                 return "@"+userName;
+             });
+
+
         }
 
         //不常用,用在双向绑定中.当UI元素值改变时,返回到数据源把值转换回来     
