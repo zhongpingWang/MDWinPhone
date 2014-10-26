@@ -16,20 +16,67 @@ namespace mdPhone.Helper
         //获取token
        public static string tokenUrl = "https://api.mingdao.com/auth2/access_token?";
 
-      //获取动态更新
-       public static string newPost = "https://api2.mingdao.com/post/followed".QueryToken();
+       private static string _newPost = "https://api2.mingdao.com/post/followed";
+        /// <summary>
+       /// 获取动态更新
+        /// </summary>
+       public static string NewPost
+       {
+           get { return AddToken(MDApi._newPost); }
+           set { MDApi._newPost = value; }
+       }
 
-       //获取当前登录用户参与的任务列表
-       public static string task_my_joined = "https://api2.mingdao.com/task/my_joined".QueryToken();
+       private static string _task_my_joined = "https://api2.mingdao.com/task/my_joined";
+        /// <summary>
+       /// 获取当前登录用户参与的任务列表
+        /// </summary>
+       public static string Task_my_joined
+       {
+           get { return AddToken(MDApi._task_my_joined); }
+           set { MDApi._task_my_joined = value; }
+       }
 
-       //获取当前登录用户待办日程列表
-       public static string calendar_todo = "https://api2.mingdao.com/calendar/todo".QueryToken();
+       private static string _calendar_todo = "https://api2.mingdao.com/calendar/todo";
+        /// <summary>
+       /// 获取当前登录用户待办日程列表
+        /// </summary>
+       public static string Calendar_todo
+       {
+           get { return AddToken(MDApi._calendar_todo); }
+           set { MDApi._calendar_todo = value; }
+       }
 
-        //根据日程编号获取单条日程内容
-       public static string calendar_detail = "https://api2.mingdao.com/calendar/detail".QueryToken();
+       private static string _calendar_detail = "https://api2.mingdao.com/calendar/detail";
+        /// <summary>
+       /// 根据日程编号获取单条日程内容
+        /// </summary>
+       public static string Calendar_detail
+       {
+           get { return AddToken(MDApi._calendar_detail); }
+           set { MDApi._calendar_detail = value; }
+       }
 
-        //发表动态
-       public static string post_update = "https://api.mingdao.com/post/update".QueryToken();
+
+       private static string _post_update = "https://api.mingdao.com/post/update";
+        /// <summary>
+       /// 发表动态
+        /// </summary>
+       public static string Post_update
+       {
+           get { return AddToken(MDApi._post_update); }
+           set { MDApi._post_update = value; }
+       } 
+      
+        /// <summary>
+        /// 加上token
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+       private static string AddToken(string url)
+       {
+           return url += "?access_token="+App.Token;;
+       }
+
 
     }
 }

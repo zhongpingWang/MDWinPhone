@@ -37,7 +37,7 @@ namespace mdPhone.View
             }
             //第一次取消头部 刷新
             getNew.Visibility = Visibility.Collapsed;
-            PostViewModel.GetNewPost(App.Token, ResultNewPost); 
+            PostViewModel.GetNewPost(ResultNewPost); 
 
             base.OnNavigatedTo(e);
         }

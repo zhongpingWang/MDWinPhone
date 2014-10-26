@@ -99,6 +99,7 @@
     <Compile Include="Controls\ListBox2\ListBox2BottomPanel.cs" />
     <Compile Include="Controls\ListBox2\ListBox2MainPanel.cs" />
     <Compile Include="Controls\ListBox2\ListBox2TopPanel.cs" />
+    <Compile Include="Controls\RichTextBoxExt\RichTextBoxExt.cs" />
     <Compile Include="Controls\WatermarkedTextBox\WatermarkedTextBox.cs" />
     <Compile Include="Helper\DataManager.cs" />
     <Compile Include="Helper\HttpWeb.cs" />
@@ -125,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage\RichTextTest.xaml.cs">
+      <DependentUpon>RichTextTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CalendarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -200,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OverrideControlStyle\OverrideControlStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestPage\RichTextTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,6 +297,104 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Emotions\md.txt" />
+    <Resource Include="Assets\Emotions\md\cake.gif" />
+    <Resource Include="Assets\Emotions\md\dy_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\gift.gif" />
+    <Resource Include="Assets\Emotions\md\good.gif" />
+    <Resource Include="Assets\Emotions\md\gz_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\handshake.gif" />
+    <Resource Include="Assets\Emotions\md\hanx_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\heart.gif" />
+    <Resource Include="Assets\Emotions\md\ka_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\lei_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\ng_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\ok.gif" />
+    <Resource Include="Assets\Emotions\md\qiao_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\qiu_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\rose.gif" />
+    <Resource Include="Assets\Emotions\md\se_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\small.gif" />
+    <Resource Include="Assets\Emotions\md\sun.gif" />
+    <Resource Include="Assets\Emotions\md\team.gif" />
+    <Resource Include="Assets\Emotions\md\tu_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\tx_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\unheart.gif" />
+    <Resource Include="Assets\Emotions\md\vw_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\wx_thumb.gif" />
+    <Resource Include="Assets\Emotions\md\yeah.gif" />
+    <Resource Include="Assets\Emotions\md\yw_thumb.gif" />
+    <Content Include="Assets\Emotions\mdGif.txt" />
+    <Content Include="Assets\Emotions\mdPng\cake.png" />
+    <Content Include="Assets\Emotions\mdPng\dy_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\gift.png" />
+    <Content Include="Assets\Emotions\mdPng\good.png" />
+    <Content Include="Assets\Emotions\mdPng\gz_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\handshake.png" />
+    <Content Include="Assets\Emotions\mdPng\hanx_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\heart.png" />
+    <Content Include="Assets\Emotions\mdPng\ka_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\lei_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\lei_thumb2.png" />
+    <Content Include="Assets\Emotions\mdPng\ng_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\ok.png" />
+    <Content Include="Assets\Emotions\mdPng\qiao_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\qiu_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\rose.png" />
+    <Content Include="Assets\Emotions\mdPng\s009.png" />
+    <Content Include="Assets\Emotions\mdPng\s010.png" />
+    <Content Include="Assets\Emotions\mdPng\s011.png" />
+    <Content Include="Assets\Emotions\mdPng\s012.png" />
+    <Content Include="Assets\Emotions\mdPng\s014.png" />
+    <Content Include="Assets\Emotions\mdPng\s015.png" />
+    <Content Include="Assets\Emotions\mdPng\s016.png" />
+    <Content Include="Assets\Emotions\mdPng\s017.png" />
+    <Content Include="Assets\Emotions\mdPng\s018.png" />
+    <Content Include="Assets\Emotions\mdPng\s019.png" />
+    <Content Include="Assets\Emotions\mdPng\s021.png" />
+    <Content Include="Assets\Emotions\mdPng\s022.png" />
+    <Content Include="Assets\Emotions\mdPng\s024.png" />
+    <Content Include="Assets\Emotions\mdPng\s025.png" />
+    <Content Include="Assets\Emotions\mdPng\s026.png" />
+    <Content Include="Assets\Emotions\mdPng\s027.png" />
+    <Content Include="Assets\Emotions\mdPng\s028.png" />
+    <Content Include="Assets\Emotions\mdPng\s029.png" />
+    <Content Include="Assets\Emotions\mdPng\s033.png" />
+    <Content Include="Assets\Emotions\mdPng\s034.png" />
+    <Content Include="Assets\Emotions\mdPng\s035.png" />
+    <Content Include="Assets\Emotions\mdPng\s036.png" />
+    <Content Include="Assets\Emotions\mdPng\s037.png" />
+    <Content Include="Assets\Emotions\mdPng\s038.png" />
+    <Content Include="Assets\Emotions\mdPng\s039.png" />
+    <Content Include="Assets\Emotions\mdPng\s040.png" />
+    <Content Include="Assets\Emotions\mdPng\s041.png" />
+    <Content Include="Assets\Emotions\mdPng\s042.png" />
+    <Content Include="Assets\Emotions\mdPng\s043.png" />
+    <Content Include="Assets\Emotions\mdPng\s044.png" />
+    <Content Include="Assets\Emotions\mdPng\s047.png" />
+    <Content Include="Assets\Emotions\mdPng\s048.png" />
+    <Content Include="Assets\Emotions\mdPng\s049.png" />
+    <Content Include="Assets\Emotions\mdPng\s052.png" />
+    <Content Include="Assets\Emotions\mdPng\s053.png" />
+    <Content Include="Assets\Emotions\mdPng\s056.png" />
+    <Content Include="Assets\Emotions\mdPng\s057.png" />
+    <Content Include="Assets\Emotions\mdPng\s058.png" />
+    <Content Include="Assets\Emotions\mdPng\s059.png" />
+    <Content Include="Assets\Emotions\mdPng\s060.png" />
+    <Content Include="Assets\Emotions\mdPng\s061.png" />
+    <Content Include="Assets\Emotions\mdPng\s062.png" />
+    <Content Include="Assets\Emotions\mdPng\s063.png" />
+    <Content Include="Assets\Emotions\mdPng\se_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\small.png" />
+    <Content Include="Assets\Emotions\mdPng\sun.png" />
+    <Content Include="Assets\Emotions\mdPng\team.png" />
+    <Content Include="Assets\Emotions\mdPng\tu_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\tx_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\unheart.png" />
+    <Content Include="Assets\Emotions\mdPng\vw_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\wx_thumb.png" />
+    <Content Include="Assets\Emotions\mdPng\yeah.png" />
+    <Content Include="Assets\Emotions\mdPng\yw_thumb.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

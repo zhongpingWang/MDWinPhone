@@ -9,6 +9,7 @@
     xmlns:ctrls="clr-namespace:mdPhone.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:textPostConvert="clr-namespace:mdPhone.Helper"
+    xmlns:RichText="clr-namespace:mdPhone.Controls.RichTextBoxExt"
     toolkit:TiltEffect.IsTiltEnabled="True" 
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -54,7 +55,8 @@
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <ProgressBar IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
-            <TextBlock Text="动态更新" Margin="9,-7,0,0" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock  Text="动态更新" Margin="9,-7,0,0" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
         </StackPanel>
       
         <!--ContentPanel - 在此处放置其他内容-->
@@ -78,9 +80,8 @@
                             <Image Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
 
                             <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
-
-                            <TextBlock Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text,Converter={StaticResource textConvert},ConverterParameter=user}" Foreground="#FFFFFF" Cursor="Hand" ></TextBlock>
-                            
+                            <RichText:RichTextBoxExt Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
+                              
                             <HyperlinkButton Margin="0,25,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
                             
                         </Grid>

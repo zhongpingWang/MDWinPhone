@@ -13,7 +13,7 @@ namespace mdPhone.Helper
         /// </summary>
         /// <param name="_this">原字符串</param>
         /// <returns>返回字符串</returns>
-        public static string QueryToken(this string _this)
+        public static string AddToken2(this string _this)
         {
             if (string.IsNullOrEmpty(_this))
             {

@@ -12,7 +12,7 @@ namespace mdPhone.ViewModel
         //获取token
         public static void GetMyJoin(string token, HttpWeb.callbackResult callback)
         {
-            string uriStr = MDApi.task_my_joined + token + "&format=json";
+            string uriStr = MDApi.Task_my_joined  + "&format=json";
             HttpWeb.CreateGetHttpResponse(uriStr, null, callback);
         } 
     }

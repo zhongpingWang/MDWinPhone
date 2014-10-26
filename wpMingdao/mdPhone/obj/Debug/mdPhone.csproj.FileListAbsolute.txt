@@ -453,3 +453,5 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csproj.GenerateRes
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.pdb
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\XapCacheFile.xml
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\TestPage\RichTextTest.g.cs
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache

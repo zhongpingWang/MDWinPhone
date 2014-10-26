@@ -1,8 +1,80 @@
-﻿<xapCache source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014/10/19 23:21:49">
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll" archivePath="mdPhone.dll" lastWriteTime="2014/10/19 23:21:46" />
+﻿<xapCache source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014/10/26 0:27:27">
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll" archivePath="mdPhone.dll" lastWriteTime="2014/10/26 0:27:24" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2014/7/20 17:42:14" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\AppBar\send_post.png" archivePath="Assets\AppBar\send_post.png" lastWriteTime="2014/9/28 22:52:53" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2014/7/20 17:42:14" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\md.txt" archivePath="Assets\Emotions\md.txt" lastWriteTime="2014/10/25 17:13:15" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdGif.txt" archivePath="Assets\Emotions\mdGif.txt" lastWriteTime="2014/10/25 16:52:45" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\cake.png" archivePath="Assets\Emotions\mdPng\cake.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\dy_thumb.png" archivePath="Assets\Emotions\mdPng\dy_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\gift.png" archivePath="Assets\Emotions\mdPng\gift.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\good.png" archivePath="Assets\Emotions\mdPng\good.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\gz_thumb.png" archivePath="Assets\Emotions\mdPng\gz_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\handshake.png" archivePath="Assets\Emotions\mdPng\handshake.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\hanx_thumb.png" archivePath="Assets\Emotions\mdPng\hanx_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\heart.png" archivePath="Assets\Emotions\mdPng\heart.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\ka_thumb.png" archivePath="Assets\Emotions\mdPng\ka_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\lei_thumb.png" archivePath="Assets\Emotions\mdPng\lei_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\lei_thumb2.png" archivePath="Assets\Emotions\mdPng\lei_thumb2.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\ng_thumb.png" archivePath="Assets\Emotions\mdPng\ng_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\ok.png" archivePath="Assets\Emotions\mdPng\ok.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\qiao_thumb.png" archivePath="Assets\Emotions\mdPng\qiao_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\qiu_thumb.png" archivePath="Assets\Emotions\mdPng\qiu_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\rose.png" archivePath="Assets\Emotions\mdPng\rose.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s009.png" archivePath="Assets\Emotions\mdPng\s009.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s010.png" archivePath="Assets\Emotions\mdPng\s010.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s011.png" archivePath="Assets\Emotions\mdPng\s011.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s012.png" archivePath="Assets\Emotions\mdPng\s012.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s014.png" archivePath="Assets\Emotions\mdPng\s014.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s015.png" archivePath="Assets\Emotions\mdPng\s015.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s016.png" archivePath="Assets\Emotions\mdPng\s016.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s017.png" archivePath="Assets\Emotions\mdPng\s017.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s018.png" archivePath="Assets\Emotions\mdPng\s018.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s019.png" archivePath="Assets\Emotions\mdPng\s019.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s021.png" archivePath="Assets\Emotions\mdPng\s021.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s022.png" archivePath="Assets\Emotions\mdPng\s022.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s024.png" archivePath="Assets\Emotions\mdPng\s024.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s025.png" archivePath="Assets\Emotions\mdPng\s025.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s026.png" archivePath="Assets\Emotions\mdPng\s026.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s027.png" archivePath="Assets\Emotions\mdPng\s027.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s028.png" archivePath="Assets\Emotions\mdPng\s028.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s029.png" archivePath="Assets\Emotions\mdPng\s029.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s033.png" archivePath="Assets\Emotions\mdPng\s033.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s034.png" archivePath="Assets\Emotions\mdPng\s034.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s035.png" archivePath="Assets\Emotions\mdPng\s035.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s036.png" archivePath="Assets\Emotions\mdPng\s036.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s037.png" archivePath="Assets\Emotions\mdPng\s037.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s038.png" archivePath="Assets\Emotions\mdPng\s038.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s039.png" archivePath="Assets\Emotions\mdPng\s039.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s040.png" archivePath="Assets\Emotions\mdPng\s040.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s041.png" archivePath="Assets\Emotions\mdPng\s041.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s042.png" archivePath="Assets\Emotions\mdPng\s042.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s043.png" archivePath="Assets\Emotions\mdPng\s043.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s044.png" archivePath="Assets\Emotions\mdPng\s044.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s047.png" archivePath="Assets\Emotions\mdPng\s047.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s048.png" archivePath="Assets\Emotions\mdPng\s048.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s049.png" archivePath="Assets\Emotions\mdPng\s049.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s052.png" archivePath="Assets\Emotions\mdPng\s052.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s053.png" archivePath="Assets\Emotions\mdPng\s053.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s056.png" archivePath="Assets\Emotions\mdPng\s056.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s057.png" archivePath="Assets\Emotions\mdPng\s057.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s058.png" archivePath="Assets\Emotions\mdPng\s058.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s059.png" archivePath="Assets\Emotions\mdPng\s059.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s060.png" archivePath="Assets\Emotions\mdPng\s060.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s061.png" archivePath="Assets\Emotions\mdPng\s061.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s062.png" archivePath="Assets\Emotions\mdPng\s062.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\s063.png" archivePath="Assets\Emotions\mdPng\s063.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\se_thumb.png" archivePath="Assets\Emotions\mdPng\se_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\small.png" archivePath="Assets\Emotions\mdPng\small.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\sun.png" archivePath="Assets\Emotions\mdPng\sun.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\team.png" archivePath="Assets\Emotions\mdPng\team.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\tu_thumb.png" archivePath="Assets\Emotions\mdPng\tu_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\tx_thumb.png" archivePath="Assets\Emotions\mdPng\tx_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\unheart.png" archivePath="Assets\Emotions\mdPng\unheart.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\vw_thumb.png" archivePath="Assets\Emotions\mdPng\vw_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\wx_thumb.png" archivePath="Assets\Emotions\mdPng\wx_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\yeah.png" archivePath="Assets\Emotions\mdPng\yeah.png" lastWriteTime="2014/10/25 17:14:44" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\yw_thumb.png" archivePath="Assets\Emotions\mdPng\yw_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2014/7/20 17:42:14" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2014/7/20 17:42:14" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2014/7/20 17:42:14" />
@@ -43,7 +115,7 @@
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="2014/7/24 22:47:29" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="2014/7/24 22:47:29" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="2014/7/24 22:47:28" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014/10/19 23:21:41" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014/10/26 0:26:55" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\ref\Coding4Fun.Phone.Controls.dll" archivePath="Coding4Fun.Phone.Controls.dll" lastWriteTime="2012/11/19 10:30:12" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\ref\Coding4Fun.Phone.Controls.Toolkit.dll" archivePath="Coding4Fun.Phone.Controls.Toolkit.dll" lastWriteTime="2012/11/19 10:30:12" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ICSharpCode.SharpZLib.Phone.dll" archivePath="ICSharpCode.SharpZLib.Phone.dll" lastWriteTime="2014/7/20 17:48:00" />
@@ -64,5 +136,5 @@
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Png.xml" archivePath="ImageTools.IO.Png.xml" lastWriteTime="2014/7/20 17:48:00" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.xml" archivePath="ImageTools.Utils.xml" lastWriteTime="2014/7/20 17:48:00" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\mdSmall.png" archivePath="Assets\Tiles\mdSmall.png" lastWriteTime="2014/8/30 21:54:39" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014/10/19 23:21:41" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014/10/26 0:26:55" />
 </xapCache>
