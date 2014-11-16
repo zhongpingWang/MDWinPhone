@@ -454,4 +454,6 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.pdb
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\XapCacheFile.xml
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\TestPage\RichTextTest.g.cs
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Microsoft.Phone.Controls.dll
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\MainPost.g.cs
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\JPushSDK-v1.0.2.dll

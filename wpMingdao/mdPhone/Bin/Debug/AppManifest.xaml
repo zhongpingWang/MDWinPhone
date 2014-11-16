@@ -11,6 +11,8 @@
     <AssemblyPart x:Name="ImageTools.IO.Gif" Source="ImageTools.IO.Gif.dll" />
     <AssemblyPart x:Name="ImageTools.IO.Png" Source="ImageTools.IO.Png.dll" />
     <AssemblyPart x:Name="ImageTools.Utils" Source="ImageTools.Utils.dll" />
+    <AssemblyPart x:Name="JPushSDK-v1.0.2" Source="JPushSDK-v1.0.2.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="PhoneCodeContractsAssemblies" Source="PhoneCodeContractsAssemblies.dll" />
   </Deployment.Parts>

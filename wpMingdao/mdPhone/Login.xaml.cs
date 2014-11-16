@@ -60,7 +60,7 @@ namespace mdPhone
                 {
                     loginAnimate.Visibility = Visibility.Visible;
                     App.Token = user.Token;
-                    NavigationService.Navigate(new Uri("/View/MainPage.xaml", UriKind.Relative));
+                    NavigationService.Navigate(new Uri("/View/MainPost.xaml", UriKind.Relative));
                 }
                 else if (user != null && user.RememberPwd)
                 {
@@ -170,7 +170,7 @@ namespace mdPhone
                         user.RememberPwd = true;
                     } 
                     UserDataManager.SaveUserInformation(user);
-                    NavigationService.Navigate(new Uri("/View/MainPage.xaml", UriKind.Relative)); 
+                    NavigationService.Navigate(new Uri("/View/MainPost.xaml", UriKind.Relative)); 
                 });
             }
             else

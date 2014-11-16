@@ -9,12 +9,13 @@ using Microsoft.Phone.Shell;
 using mdPhone.Resources;
 using mdPhone.Model;
 using mdPhone.Helper;
+using mdPhone.JPush;
 
 namespace mdPhone
 {
     public partial class App : Application
     {
-
+        public static int status { get; private set; }
         private static string _token;
 
         public static string Token
@@ -92,18 +93,66 @@ namespace mdPhone
         // 此代码在重新激活应用程序时不执行
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            JPushSDK.JServer.IsDebug = true;// 设置开启日志,发布时请关闭日志
+            //app_key for JPush portal
+            JPushSDK.JServer.Setup("02d999277591d73240544c21", "md_wp_inbox", null);
+            //第一次登陆，可以调用RegisterNotificationWithMessagebox，也可以自己实现对话框
+            if (UserSetting.shareUserDefualt().isFirstLoad)
+            {
+                UserSetting.shareUserDefualt().isFirstLoad = false;
+                UserSetting.shareUserDefualt().Synchronized();
+                JPushSDK.JServer.RegisterNotificationWithMessagebox("是否允许推送消息给您", "明道", (r) =>
+                {
+                    if (r)
+                    {
+                        UserSetting.shareUserDefualt().isOpenNotification = true;
+                    }
+                    else
+                    {
+                        UserSetting.shareUserDefualt().isOpenNotification = false;
+                    }
+                });
+            }
+            //非初次登陆 每次检查用户选择的状态，如果用户选择了推送则调用mpns接口，否则不调用
+            else
+            {
+                if (UserSetting.shareUserDefualt().isOpenNotification)
+                {
+                    JPushSDK.JServer.RegisterNotification();
+                }
+            }
+            //注册JPush SDK的状态函数，将结果保存在全局变量中，供需要的时候查询
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidSetupNotification, (k) =>
+            {
+                status = 1;
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidRegisterNotification, (k) =>
+            {
+                status = 2;
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidLoginNotification, (k) =>
+            {
+                status = 3;
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidCloseNotification, (k) =>
+            {
+                status = 0;
+            });
+
         }
 
         // 激活应用程序(置于前台)时执行的代码
         // 此代码在首次启动应用程序时不执行
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            JPushSDK.JServer.Activated();
         }
 
         // 停用应用程序(发送到后台)时执行的代码
         // 此代码在应用程序关闭时不执行
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            JPushSDK.JServer.Deactivated();
         }
 
         // 应用程序关闭(例如，用户点击“后退”)时执行的代码

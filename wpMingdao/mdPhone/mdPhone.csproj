@@ -107,12 +107,17 @@
     <Compile Include="Helper\MDExpansion.cs" />
     <Compile Include="Helper\textConvert.cs" />
     <Compile Include="Helper\UserDataManager.cs" />
+    <Compile Include="JPush\JPushClient.cs" />
+    <Compile Include="JPush\JPushHttpClient.cs" />
+    <Compile Include="JPush\JPushSDK.cs" />
+    <Compile Include="JPush\PushClient.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\calendar\calendarList.cs" />
     <Compile Include="Model\calendar\calendars.cs" />
+    <Compile Include="Model\passport\Unreadcount.cs" />
     <Compile Include="Model\post\groups.cs" />
     <Compile Include="Model\post\Post.cs" />
     <Compile Include="Model\post\Posts.cs" />
@@ -122,6 +127,7 @@
     <Compile Include="Model\task\user.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JPush\UserSetting.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +138,7 @@
     </Compile>
     <Compile Include="ViewModel\CalendarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\PassPortViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />
     <Compile Include="View\about\about.xaml.cs">
@@ -169,6 +176,9 @@
     </Compile>
     <Compile Include="View\mainPart\search.xaml.cs">
       <DependentUpon>search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPost.xaml.cs">
+      <DependentUpon>MainPost.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\post\AddPost.xaml.cs">
       <DependentUpon>AddPost.xaml</DependentUpon>
@@ -263,6 +273,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MainPost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\post\AddPost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -292,6 +306,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1.png" />
+    <Content Include="Assets\2.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\AppBar\send_post.png" />
     <Content Include="Assets\ApplicationIcon.png">
@@ -395,6 +411,7 @@
     <Content Include="Assets\Emotions\mdPng\wx_thumb.png" />
     <Content Include="Assets\Emotions\mdPng\yeah.png" />
     <Content Include="Assets\Emotions\mdPng\yw_thumb.png" />
+    <Content Include="Assets\Settings.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -411,6 +428,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Tiles\mdSmall.png" />
+    <Content Include="config.xml" />
     <Content Include="Images\login\bannerBg.png" />
     <Content Include="Images\login\loginBg.png" />
     <Content Include="Images\login\mdIconLogin.png" />
@@ -439,7 +457,21 @@
     <Content Include="Images\mainIcon\task.png" />
     <Content Include="Images\mainIcon\We.png" />
     <Content Include="Assets\AppBar\add_post.png" />
+    <Content Include="Images\post\allChat.png" />
+    <Content Include="Images\post\allChatTip.png" />
+    <Content Include="Images\post\allMsg.png" />
+    <Content Include="Images\post\allMsgTip.png" />
+    <Content Include="Images\post\atMe.png" />
+    <Content Include="Images\post\atMeTip.png" />
+    <Content Include="Images\post\privateChat.png" />
+    <Content Include="Images\post\privateChatTip.png" />
+    <Content Include="Images\post\refresh.png" />
+    <Content Include="Images\post\replyMe.png" />
+    <Content Include="Images\post\replyMeTip.png" />
+    <Content Include="Images\post\sysMsg.png" />
+    <Content Include="Images\post\sysMsgTip.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="ref\ifunction.JPush.dll" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
@@ -454,10 +486,7 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\post\" />
-    <Folder Include="ref\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Reference Include="Coding4Fun.Phone.Controls">
       <HintPath>ref\Coding4Fun.Phone.Controls.dll</HintPath>
@@ -490,6 +519,11 @@
     <Reference Include="ImageTools.Utils">
       <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="JPushSDK-v1.0.2, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ref\JPushSDK-v1.0.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
