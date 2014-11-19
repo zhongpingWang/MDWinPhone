@@ -14,6 +14,10 @@ namespace mdPhone.JPush
 
            var c= jpushSDK.AppKey;
            return c.ToString();
+
+
+
+
         
         } 
     }

@@ -107,10 +107,24 @@
     <Compile Include="Helper\MDExpansion.cs" />
     <Compile Include="Helper\textConvert.cs" />
     <Compile Include="Helper\UserDataManager.cs" />
+    <Compile Include="JPush\common\BaseHttpClient.cs" />
+    <Compile Include="JPush\common\BaseResult.cs" />
+    <Compile Include="JPush\common\DeviceEnum.cs" />
+    <Compile Include="JPush\common\ResponseResult.cs" />
     <Compile Include="JPush\JPushClient.cs" />
-    <Compile Include="JPush\JPushHttpClient.cs" />
-    <Compile Include="JPush\JPushSDK.cs" />
-    <Compile Include="JPush\PushClient.cs" />
+    <Compile Include="JPush\push\JPushSDK.cs" />
+    <Compile Include="JPush\push\CustomMessageParams.cs" />
+    <Compile Include="JPush\push\MessageParams.cs" />
+    <Compile Include="JPush\push\MessageResult.cs" />
+    <Compile Include="JPush\push\NotificationParams.cs" />
+    <Compile Include="JPush\push\PushClient.cs" />
+    <Compile Include="JPush\report\ReceivedResult.cs" />
+    <Compile Include="JPush\report\ReportClient.cs" />
+    <Compile Include="JPush\util\Base64.cs" />
+    <Compile Include="JPush\util\JsonTool.cs" />
+    <Compile Include="JPush\util\Md5.cs" />
+    <Compile Include="JPush\util\md5Interface.cs" />
+    <Compile Include="JPush\util\StringUtil.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -428,7 +442,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Tiles\mdSmall.png" />
-    <Content Include="config.xml" />
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Images\login\bannerBg.png" />
     <Content Include="Images\login\loginBg.png" />
     <Content Include="Images\login\mdIconLogin.png" />
@@ -472,6 +488,8 @@
     <Content Include="Images\post\sysMsgTip.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="ref\ifunction.JPush.dll" />
+    <Content Include="ref\jpush-api.dll" />
+    <Content Include="ref\Newtonsoft.Json.dll" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
@@ -527,6 +545,7 @@
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="PhoneCodeContractsAssemblies">
       <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\PhoneCodeContractsAssemblies.dll</HintPath>
     </Reference>
