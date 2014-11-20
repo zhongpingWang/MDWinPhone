@@ -11,11 +11,7 @@ using mdPhone.JPush;
 namespace cn.jpush.api.push
 {
     internal class PushClient:BaseHttpClient
-    {
-        private const String HOST_NAME_SSL = "https://api.jpush.cn";
-        private const String HOST_NAME = "http://api.jpush.cn:8800";
-        private const String PUSH_PATH = "/v2/push";
-
+    {  
         private String appKey;
         private String masterSecret;
         private bool enableSSL = false;
@@ -25,9 +21,9 @@ namespace cn.jpush.api.push
         mdPhone.JPush.JPushSDK jpushSDK = new mdPhone.JPush.JPushSDK();
 
       
-        public PushClient(String masterSecret, String appKey, long timeToLive, HashSet<DeviceEnum> devices, bool apnsProduction)
-        { 
-            this.appKey = appKey;
+        public PushClient(String masterSecret, long timeToLive, HashSet<DeviceEnum> devices, bool apnsProduction)
+        {
+            this.appKey = jpushSDK.AppKey;
             this.masterSecret = masterSecret;
             this.timeToLive = timeToLive;
             this.devices = devices;
@@ -96,8 +92,8 @@ namespace cn.jpush.api.push
         {
              
            
-            String url = enableSSL ? HOST_NAME_SSL : HOST_NAME
-            url += PUSH_PATH;
+            String url = enableSSL ?jpushSDK.HOST_NAME_SSL : jpushSDK.HOST_NAME;
+            url += jpushSDK.PUSH_PATH;
             String pamrams = prase(msgParams, msgType);
             //Console.WriteLine("begin post");
             sendPost(url, null, pamrams,callback);

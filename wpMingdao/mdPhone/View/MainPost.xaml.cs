@@ -19,6 +19,8 @@ using System.Text;
 using System.Runtime.Serialization.Json;
 using ImageTools;
 using mdPhone.JPush;
+using cn.jpush.api.common;
+using cn.jpush.api.push;
 
 namespace mdPhone.View
 {
@@ -32,8 +34,7 @@ namespace mdPhone.View
         //初始化
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            JPushClient jpushclient = new JPushClient();
-           string s= jpushclient.SendMessage();
+             
 
             string registrationID = JPushSDK.JServer.GetRegisrtationID();
             //获取是否是点击toast 进入程序
@@ -82,8 +83,17 @@ namespace mdPhone.View
                 unreadCount = ser.ReadObject(ms) as Unreadcount;
                 ms.Close();
                 ms.Dispose();
-               
-              
+
+                HashSet<DeviceEnum> set = new HashSet<DeviceEnum>();
+                set.Add(DeviceEnum.Winphone);
+                String master_secret = "c36c2aac03b8dd5c8f8a1f18";
+                PushClient client = new PushClient(master_secret, 0, set, true);
+                string extras = "{\"winphone\":{\"badge\":88, \"sound\":\"happy\"}}";
+                NotificationParams notifyParams = new NotificationParams();
+                notifyParams.ReceiverType = ReceiverTypeEnum.APP_KEY;
+                notifyParams.SendNo = 256;
+                client.sendNotification("ceshi", notifyParams, extras, pushCallabck);
+
 
                 Dispatcher.BeginInvoke(() =>
                 {
@@ -97,7 +107,7 @@ namespace mdPhone.View
                         allMsgImg.Source = new BitmapImage(new Uri("/Images/post/allMsgTip.png", UriKind.Relative));
                         allMsg.Text = unreadCount.updated;
                         allMsg.Visibility = Visibility.Visible;
-                        JPushSDK.JServer.RegisterNotificationWithMessagebox("全部消息"+unreadCount.updated, "明道", null);
+                    
                          
                     }
                     else
@@ -115,7 +125,7 @@ namespace mdPhone.View
                         sysMsg.Margin = new Thickness(0, 14, mRight, 0);
                         sysMsg.Text = unreadCount.sysmsg;
                         sysMsg.Visibility = Visibility.Visible;
-                        JPushSDK.JServer.RegisterNotificationWithMessagebox("系统消息"+unreadCount.sysmsg, "明道", null);
+                       
                     }
                     else
                     {
@@ -132,7 +142,7 @@ namespace mdPhone.View
                         atMe.Margin = new Thickness(0, 14, mRight, 0);
                         atMe.Text = unreadCount.atme;
                         atMe.Visibility = Visibility.Visible;
-                        JPushSDK.JServer.RegisterNotificationWithMessagebox("提到我的"+unreadCount.atme,"明道", null);
+                        
                     }
                     else
                     {
@@ -151,7 +161,7 @@ namespace mdPhone.View
                         replyMe.Margin = new Thickness(0, 14, mRight, 0);
                         replyMe.Text = unreadCount.replyme;
                         replyMe.Visibility = Visibility.Visible;
-                        JPushSDK.JServer.RegisterNotificationWithMessagebox("回复我的"+unreadCount.replyme,"明道", null);
+                       
                     }
                     else
                     {
@@ -165,6 +175,13 @@ namespace mdPhone.View
         }
 
         DateTime backTime = DateTime.Now;
+
+
+        private void pushCallabck(string result) 
+        {
+            string s = "";
+        }
+
 
         //在按一次推出
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)

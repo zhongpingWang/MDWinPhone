@@ -111,7 +111,6 @@
     <Compile Include="JPush\common\BaseResult.cs" />
     <Compile Include="JPush\common\DeviceEnum.cs" />
     <Compile Include="JPush\common\ResponseResult.cs" />
-    <Compile Include="JPush\JPushClient.cs" />
     <Compile Include="JPush\push\JPushSDK.cs" />
     <Compile Include="JPush\push\CustomMessageParams.cs" />
     <Compile Include="JPush\push\MessageParams.cs" />

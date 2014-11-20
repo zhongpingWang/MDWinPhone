@@ -21,12 +21,12 @@ namespace mdPhone.JPush
                 if (_appKey==null)
                 {
                   Uri uri = new Uri("config.xml", UriKind.Relative);
-                  var configDoc = XDocument.Load(uri.Tostring());
-                  var configAppkey =configDoc.Element("JPush").Element("appkey").Value; 
+                  var configDoc = XDocument.Load(uri.ToString());
+                  var configAppkey =configDoc.Element("JPush").Element("appkey").Value;
 
-                  if (!string.IsNullOrEmpty(configAppkey.Tostring()))
+                  if (!string.IsNullOrEmpty(configAppkey.ToString()))
                   {
-                      _appKey = configAppkey.Tostring();
+                      _appKey = configAppkey.ToString();
                   }
                 }    
                 return _appKey;  

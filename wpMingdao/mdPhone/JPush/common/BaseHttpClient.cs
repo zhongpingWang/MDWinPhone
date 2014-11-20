@@ -58,12 +58,12 @@ namespace cn.jpush.api.common
                 request.Method = method;
                 request.Accept = "text/html, application/xhtml+xml, */*";
                 request.ContentType = "application/x-www-form-urlencoded";
-                request.Headers["Charset"] = "UTF-8";
+                request.Headers["Charset"] = CHARSET;
                 if (!String.IsNullOrEmpty(auth))
                 {
                     request.Headers["Authorization"] = "Basic " + auth;
                 }
-                if (string.IsNullOrEmpty(reqParams))
+                if (!string.IsNullOrEmpty(reqParams))
                 {
                     byte[] data = Encoding.UTF8.GetBytes(reqParams.ToString()); 
 
@@ -97,9 +97,6 @@ namespace cn.jpush.api.common
 
                     }), request);
 
-
-
-
                 }
                 else
                 {
@@ -129,10 +126,7 @@ namespace cn.jpush.api.common
             }
             finally 
             { 
-                if(request != null)
-                {
-                    request.Abort();
-                }            
+                 
             }
             
         }
