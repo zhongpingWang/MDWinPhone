@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using mdPhone.Model;
 
 namespace mdPhone.Model.calendar
 {
@@ -69,13 +70,13 @@ namespace mdPhone.Model.calendar
             set { _is_recur = value; }
         }
 
-        private user _user;
+        //private user _user;
 
-        public user user
-        {
-            get { return _user; }
-            set { _user = value; }
-        }
+        //public user user
+        //{
+        //    get { return _user; }
+        //    set { _user = value; }
+        //}
 
 
     }

@@ -13,8 +13,20 @@ namespace mdPhone.JPush
         public  string HOST_NAME = "http://api.jpush.cn:8800";
         public  string PUSH_PATH = "/v2/push";
 
+        private string _channel = "md_wp_inbox";
+         /// <summary>
+         /// 通道
+         /// </summary>
+        public string Channel
+        {
+            get { return _channel; }
+            set { _channel = value; }
+        }
 
         private string _appKey; 
+         /// <summary>
+         /// appkey
+         /// </summary>
         public string AppKey
         {
             get {

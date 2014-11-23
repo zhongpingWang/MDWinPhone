@@ -67,10 +67,21 @@ namespace mdPhone.Helper
            set { MDApi._post_update = value; }
        }
 
-       private static string _unreadcount = "https://api.mingdao.com/passport/unreadcount";
+       private static string _userDetail = "https://api.mingdao.com/passport/detail";
         /// <summary>
-       /// 获取当前登录用户的各种未读消息数量
+       /// 用户详情
         /// </summary>
+       public static string UserDetail
+       {
+           get { return AddToken(MDApi._userDetail); }
+           set { MDApi._userDetail = value; }
+       }
+
+
+       private static string _unreadcount = "https://api.mingdao.com/passport/unreadcount";
+       /// <summary>
+       /// 获取当前登录用户的各种未读消息数量
+       /// </summary>
        public static string Unreadcount
        {
            get { return AddToken(MDApi._unreadcount); }

@@ -93,9 +93,14 @@ namespace mdPhone
         // 此代码在重新激活应用程序时不执行
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            JPushSDK.JServer.IsDebug = true;// 设置开启日志,发布时请关闭日志
+            var jpushSDK = new mdPhone.JPush.JPushSDK();
+
+            JPushSDK.JServer.IsDebug = false;// 设置开启日志,发布时请关闭日志
             //app_key for JPush portal
-            JPushSDK.JServer.Setup("02d999277591d73240544c21", "md_wp_inbox", null);
+            //setup第一个参数替换成您在JPush Portal中的app_key
+            //setup第二个参数替换成您定义的渠道名称
+            //setup第二个参数是一个获取RegisrtationID的委托，不需要时可以填null
+            JPushSDK.JServer.Setup(jpushSDK.AppKey, jpushSDK.Channel, null);
             //第一次登陆，可以调用RegisterNotificationWithMessagebox，也可以自己实现对话框
             if (UserSetting.shareUserDefualt().isFirstLoad)
             {
@@ -121,19 +126,22 @@ namespace mdPhone
                     JPushSDK.JServer.RegisterNotification();
                 }
             }
-            //注册JPush SDK的状态函数，将结果保存在全局变量中，供需要的时候查询
+            //注册JPush SDK的状态函数，将结果保存在全局变量中，供需要的时候查询 建立连接
             JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidSetupNotification, (k) =>
             {
                 status = 1;
             });
+            //登陆成功
             JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidRegisterNotification, (k) =>
             {
                 status = 2;
             });
+            //注册成功
             JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidLoginNotification, (k) =>
             {
                 status = 3;
             });
+            //关闭连接
             JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidCloseNotification, (k) =>
             {
                 status = 0;

@@ -10,7 +10,9 @@ namespace mdPhone.Model
     {
 
         private string _id;
-
+        /// <summary>
+        /// 标识列
+        /// </summary>
         public string id
         {
             get { return _id; }
@@ -18,7 +20,9 @@ namespace mdPhone.Model
         }
 
         private string _name;
-
+        /// <summary>
+        /// 用户姓名
+        /// </summary>
         public string name
         {
             get { return _name; }
@@ -59,6 +63,7 @@ namespace mdPhone.Model
             get { return _userEmail; }
             set { _userEmail = value; }
         }
+
 
 
         private string _userPwd;

@@ -1,0 +1,139 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mdPhone.View.user.userInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
+        </Grid.Background>
+       
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+            <Grid.Resources>
+                <Style x:Key="textBlock" TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="24" />
+                </Style>
+            </Grid.Resources>
+            
+            
+            <!--枢轴控件-->
+            <phone:Pivot Title="明道-用户中心">
+                <!--枢轴项一-->
+                <phone:PivotItem Header="个人中心">
+
+
+                   
+                    
+                    
+                    <StackPanel>
+
+
+                        <ProgressBar Margin="0,200,0,0" Width="480" Name="loading" IsIndeterminate="True" />
+
+                        <StackPanel Name="userBox" Visibility="Collapsed">
+                            <StackPanel Grid.Row="2" VerticalAlignment="Center"  Orientation="Horizontal">
+                                <Image Width="64" Height="64"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="/Assets/1.png">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="32,32" RadiusX="32" RadiusY="32" />
+                                    </Image.Clip>
+                                </Image>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,24,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}">公司名称：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userCompanyName" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}">入职时间：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userJoin" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}">用户名：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userName" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}" >job：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userJob" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}">邮箱：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userEmail" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+
+                            <StackPanel  Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}" >等级：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userGrade" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}" >积分：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userMark" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}" >手机：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="userPhone" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource textBlock}" >地址：</TextBlock>
+                                <TextBlock Style="{StaticResource textBlock}" Name="uerAddress" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    
+                    <!--无文字环绕的双线列表-->
+                    <!--<phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+                        <phone:LongListSelector.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,17">
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="NoWrap" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <TextBlock Text="{Binding LineThree}" TextWrapping="NoWrap" Margin="12,-6,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </phone:LongListSelector.ItemTemplate>
+                    </phone:LongListSelector>-->
+
+                  
+                </phone:PivotItem>
+
+                <!--枢轴项二-->
+                <phone:PivotItem Header="通知设置">
+                    <Grid>
+                        <toolkit:ToggleSwitch    Name="togglePush" Header="push通知" Content="On" IsChecked="true" Click="togglePush_Click"></toolkit:ToggleSwitch>
+                         
+                    </Grid>
+                </phone:PivotItem>
+            </phone:Pivot>
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

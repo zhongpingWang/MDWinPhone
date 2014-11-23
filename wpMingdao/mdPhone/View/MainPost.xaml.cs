@@ -29,6 +29,7 @@ namespace mdPhone.View
         public MainPost()
         {
             InitializeComponent();
+            this.Loaded += MainPage_Loaded;
         } 
 
         //初始化
@@ -43,6 +44,7 @@ namespace mdPhone.View
             JPushSDK.JServer.TrackPageInto("/view/MainPost");
             if (registrationID != null && registrationID.Length > 0)
             {
+                UserSetting.shareUserDefualt().registrationID = registrationID;
                 //TextRegistrationID.Text = registrationID;
             }
 
@@ -92,7 +94,7 @@ namespace mdPhone.View
                 NotificationParams notifyParams = new NotificationParams();
                 notifyParams.ReceiverType = ReceiverTypeEnum.APP_KEY;
                 notifyParams.SendNo = 256;
-                client.sendNotification("ceshi", notifyParams, extras, pushCallabck);
+              //  client.sendNotification("ceshi", notifyParams, extras, pushCallabck);
 
 
                 Dispatcher.BeginInvoke(() =>
@@ -268,6 +270,92 @@ namespace mdPhone.View
             PassPortViewModel.Unreadcount(ResultNewPost);
         }
 
+        private void uerImg_MouseLeftButtonUp_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/user/userInfo.xaml", UriKind.Relative));
+        }
+
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {  //注册登陆状态
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidSetupNotification, (K) =>
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    try
+                    {
+                       // TextConnectionState.Text = "建立连接";
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+
+                });
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidRegisterNotification, (K) =>
+            {
+                if (K != null && K.ContainsKey("RegistrationID"))
+                {
+                    UserSetting.shareUserDefualt().registrationID = (string)K["RegistrationID"];
+                    //TextRegistrationID.Text = (string)K["RegistrationID"];
+                }
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidLoginNotification, (K) =>
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+
+                    try
+                    {
+                       // TextConnectionState.Text = "登陆成功";
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                });
+            });
+            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidCloseNotification, (K) =>
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+
+                    try
+                    {
+                       // TextConnectionState.Text = "关闭连接";
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                });
+            });
+            //访问全局的状态，确保如果没有一开始就进入MainPage也能显示正常的链接状态
+            //try
+            //{
+            //    switch (App.status)
+            //    {
+            //        case 1:
+            //            TextConnectionState.Text = "建立连接";
+            //            break;
+            //        case 2:
+            //            TextConnectionState.Text = "注册成功";
+            //            break;
+            //        case 3:
+            //            TextConnectionState.Text = "登陆成功";
+            //            break;
+            //        default:
+            //            TextConnectionState.Text = "关闭连接";
+            //            break;
+            //    }
+            //}
+            //catch (Exception)
+            //{
+
+            //}
+
+        }
 
     }
 }

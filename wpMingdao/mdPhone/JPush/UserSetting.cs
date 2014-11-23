@@ -24,6 +24,9 @@ namespace mdPhone.JPush
         public bool isOpenNotification { get; set; }
         [DataMember]
         public bool isFirstLoad { get; set; }
+
+        public string registrationID { get; set; }
+
         public static UserSetting shareUserDefualt()
         {
             lock (isoKey)
@@ -75,7 +78,7 @@ namespace mdPhone.JPush
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                //Debug.WriteLine(e.Message);
             }
         }
     }

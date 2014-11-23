@@ -138,7 +138,8 @@
     <Compile Include="Model\post\user.cs" />
     <Compile Include="Model\task\TaskInfo.cs" />
     <Compile Include="Model\task\user.cs" />
-    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\user\UserDetailInfo.cs" />
+    <Compile Include="Model\user\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JPush\UserSetting.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
@@ -154,6 +155,7 @@
     <Compile Include="ViewModel\PassPortViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="View\about\about.xaml.cs">
       <DependentUpon>about.xaml</DependentUpon>
     </Compile>
@@ -207,6 +209,9 @@
     </Compile>
     <Compile Include="View\user\main.xaml.cs">
       <DependentUpon>main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\userInfo.xaml.cs">
+      <DependentUpon>userInfo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +312,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\user\main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\user\userInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

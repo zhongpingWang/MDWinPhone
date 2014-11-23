@@ -48,7 +48,7 @@
 
 
         <StackPanel Grid.Row="2" VerticalAlignment="Center" >
-            <Image Width="128" Height="128"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="/Assets/1.png">
+            <Image Width="128" Height="128"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="/Assets/1.png" MouseLeftButtonUp="uerImg_MouseLeftButtonUp_1">
                 <Image.Clip>
                     <EllipseGeometry Center="64,64" RadiusX="64" RadiusY="64" />
                 </Image.Clip>
