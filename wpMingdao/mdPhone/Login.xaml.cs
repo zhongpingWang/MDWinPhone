@@ -41,7 +41,11 @@ namespace mdPhone
                               });
 
             }
-            base.OnBackKeyPress(e);  
+            else
+            {
+                Application.Current.Terminate();
+            }
+            base.OnBackKeyPress(e);
         }
 
 

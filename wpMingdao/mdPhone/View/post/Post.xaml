@@ -46,25 +46,33 @@
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+    <Grid x:Name="LayoutRoot" Width="480" ManipulationDelta="ContentPanel_ManipulationDelta">
+        <Grid.RowDefinitions> 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <ProgressBar IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
-            <TextBlock  Text="动态更新" Margin="9,-7,0,0" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
+        </Grid.Background>
 
-        </StackPanel>
-      
+        
+     
         <!--ContentPanel - 在此处放置其他内容-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ProgressBar IsIndeterminate="True" Name="fristLoad"/>
-      
+        <Grid x:Name="ContentPanel" Grid.Row="1"  Margin="0,0,0,0"> 
 
-            <ListBox  Name="postListBox" Width="480" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480"></ColumnDefinition>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ProgressBar IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
+            <ProgressBar Grid.Row="0" Grid.Column="0" IsIndeterminate="True" Name="fristLoad"/>
+
+
+            <ListBox Grid.Column="0" Grid.Row="0"   Name="postListBox" Width="480" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="0,32,0,0">
@@ -81,14 +89,37 @@
 
                             <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
                             <RichText:RichTextBoxExt Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
-                              
+
                             <HyperlinkButton Margin="0,25,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
-                            
+
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
 
+            <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
+                <Image MouseLeftButtonUp="breakPost_mouseup" Tag="all" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="50" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">动态更新</TextBlock>
+
+                <Image MouseLeftButtonUp="breakPost_mouseup" Tag="sys" Name="sysMsgImg" Source="/Images/post/sysMsg.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">系统消息</TextBlock>
+
+                <Image Tag="at" MouseLeftButtonUp="breakPost_mouseup" Name="atMeImg" Source="/Images/post/atMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">提到我的</TextBlock>
+
+                <Image Tag="reply" MouseLeftButtonUp="breakPost_mouseup" Name="replyMeImg" Source="/Images/post/replyMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">回复我的</TextBlock>
+
+                <Image Tag="privateChat" MouseLeftButtonUp="breakPost_mouseup" Source="/Images/post/privateChat.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">私聊</TextBlock>
+
+                <Image Tag="allChat" MouseLeftButtonUp="breakPost_mouseup" Source="/Images/post/allChat.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">群聊</TextBlock>
+
+                <Image Name="refresh" Source="/Images/post/refresh.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">刷新</TextBlock>
+
+            </StackPanel>
 
             <!--<ListBox  Name="postsImtes" Width="480" ScrollViewer.HorizontalScrollBarVisibility="Auto">
                 <ListBox.ItemTemplate>

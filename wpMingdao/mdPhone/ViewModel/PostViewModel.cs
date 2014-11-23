@@ -5,15 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using mdPhone.Helper;
 using mdPhone.Model;
+using mdPhone.Model.post;
 
 namespace mdPhone.ViewModel
 {
    public class PostViewModel
     {
         //获取token
-        public static void GetNewPost(HttpWeb.callbackResult callback)
+        public static void GetNewPost(PostEnum postEnum, HttpWeb.callbackResult callback)
         {
-            string uriStr = MDApi.NewPost + "&format=json";  
+            string uriStr = string.Empty;
+            if (postEnum==PostEnum.PostAll)
+            {
+                uriStr = MDApi.PostAll;
+            }
+            else if (postEnum==PostEnum.Atme2)
+            {
+                 uriStr = MDApi.Atme2;
+            } else if (postEnum==PostEnum.Replybyme)
+            {
+                uriStr = MDApi.Replybyme;
+            }
             HttpWeb.CreateGetHttpResponse(uriStr, null, callback);
         }
 

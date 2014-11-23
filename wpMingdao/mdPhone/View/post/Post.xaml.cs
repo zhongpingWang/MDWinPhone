@@ -16,6 +16,7 @@ using mdPhone.ViewModel;
 using mdPhone.Model;
 using System.Threading;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace mdPhone.View
 {
@@ -28,19 +29,51 @@ namespace mdPhone.View
          
         protected override void OnNavigatedTo(NavigationEventArgs e)
         { 
-            string post = DataManager.LoadPostSettings("post");
-            if (!string.IsNullOrEmpty(post))
-            {
-                ResultNewPost(post);
-                //已有数据 取消中间加载
-                fristLoad.Visibility = Visibility.Collapsed;
-            }
+            //string post = DataManager.LoadPostSettings("post");
+            //if (!string.IsNullOrEmpty(post))
+            //{
+            //    ResultNewPost(post);
+            //    //已有数据 取消中间加载
+            //    fristLoad.Visibility = Visibility.Collapsed;
+            //}
+
             //第一次取消头部 刷新
             getNew.Visibility = Visibility.Collapsed;
-            PostViewModel.GetNewPost(ResultNewPost); 
-
+            //获取参数
+            string type = "PostAll";
+            if (NavigationContext.QueryString.ContainsKey("type"))
+            {
+                type = NavigationContext.QueryString["type"];
+            }
+            getPostByType(type);
             base.OnNavigatedTo(e);
         }
+        PostEnum postenum = new PostEnum();
+        /// <summary>
+        /// 获取动态更新 根据类型
+        /// </summary>
+        private void getPostByType(string type)
+        {
+            if (type == "PostAll")
+            {
+                postenum = PostEnum.PostAll;
+            }
+            else if (type == "Atme2")
+            {
+                postenum = PostEnum.Atme2;
+            }
+            else if (type == "Replybyme")
+            {
+                postenum = PostEnum.Replybyme;
+            }
+            else
+            {
+                postenum = PostEnum.PostAll;
+            }
+            PostViewModel.GetNewPost(postenum, ResultNewPost);
+
+        }
+
 
         public void ResultNewPost(string resutlt)
         {
@@ -69,7 +102,11 @@ namespace mdPhone.View
                
                 });
             } 
-        }
+        } 
+
+
+
+
 
         //回复
         private void replyPost_Click(object sender, RoutedEventArgs e)
@@ -84,7 +121,57 @@ namespace mdPhone.View
             
         }
 
-      
+
+        private void breakPost_mouseup(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 滑出右侧菜单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ContentPanel_ManipulationDelta(object sender, ManipulationDeltaEventArgs e)
+        {
+            
+           double mLeft=ContentPanel.Margin.Left+ e.DeltaManipulation.Translation.X;
+           if (mLeft<-85)
+           {
+               mLeft = -85;
+           }
+           else if (mLeft>0)
+           {
+               mLeft = 0;
+           }
+           ContentPanel.Margin = new Thickness(mLeft,0,0,0);
+                
+               
+           
+        }
+
+
+        private void PhoneApplicationPage_ManipulationDelta(object sender, ManipulationDeltaEventArgs e)
+        {
+
+            double x = e.DeltaManipulation.Translation.X;
+            double x2 = e.CumulativeManipulation.Translation.X;
+            // this.ContentPanel.X = e.CumulativeManipulation.Translation.X ;
+
+
+        }
+
+
+        private void PhoneApplicationPage_ManipulationCompleted(object sender, ManipulationDeltaEventArgs e)
+        {
+            double x = e.DeltaManipulation.Translation.X;
+            double x2 = e.CumulativeManipulation.Translation.X;
+            // this.ContentPanel.X = e.CumulativeManipulation.Translation.X ;
+
+
+        }
+        
+
 
     }
 }

@@ -70,6 +70,14 @@ namespace mdPhone.View
             base.OnNavigatedFrom(e);
         }
 
+        private void breakPost_mouseup(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var tag = (sender as Image).Tag;
+            NavigationService.Navigate(new Uri("/View/post/Post.xaml?type="+tag.ToString(), UriKind.Relative));
+
+        }
+
+
         public void ResultNewPost(string resutlt)
         {
             //错误信息 
@@ -185,6 +193,61 @@ namespace mdPhone.View
         }
 
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+            UserInfo user = UserDataManager.LoadUserSettings();
+            string alias = "user_" + user.id;//(string)TextAlias.Text;
+            //alias文本框中为空的情况，把alias设置为null，不改变先前设置的alias
+            if (alias.Length == 0)
+            {
+                alias = null;
+            }
+          
+
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                btn.IsEnabled = false;
+            }
+            //文本框中3个tag都为空的时候，将set设置为null，不改变先前配置tags
+            HashSet<string> set = new HashSet<string>();
+            
+            // set.Add("tag");
+            
+            if (set.Count == 0)
+                set = null;
+
+            //调用JPush SDK中的api
+            JPushSDK.JServer.SetTagsWithAlias(set, alias, (i, j, k) =>
+            {
+                string content = "result:" + i.ToString();
+                content += " tags：";
+                string tags;
+                if (j == null)
+                {
+                    tags = "null";
+                }
+                else if (j.Count == 0)
+                {
+                    tags = "tags is null";
+                }
+                else
+                {
+                    tags = string.Join<string>(",", j);
+                }
+                content += tags;
+                string strAlias = (k == null ? "null" : k);
+                content += (" alias：" + strAlias);
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                { 
+
+                });
+
+            });
+        }
+
+
         //在按一次推出
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
@@ -233,8 +296,6 @@ namespace mdPhone.View
             toast.TextOrientation = System.Windows.Controls.Orientation.Horizontal;
             toast.Show();
         }
-
-
 
         private void Exit()
         {

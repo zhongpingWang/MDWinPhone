@@ -26,6 +26,40 @@ namespace mdPhone.Helper
            set { MDApi._newPost = value; }
        }
 
+       private static string _postAll = "https://api.mingdao.com/post/all";
+
+       public static string PostAll
+       {
+           get { return AddTokenFormatJson(MDApi._postAll); }
+           set { MDApi._postAll = value; }
+       }
+  
+
+
+       private static string _atme2 = "https://api.mingdao.com/post/atme_2";
+        /// <summary>
+        /// at me
+        /// </summary>
+       public static string Atme2
+       {
+           get { return AddTokenFormatJson(MDApi._atme2); }
+           set { MDApi._atme2 = value; }
+       }
+
+
+       private static string _replybyme = "https://api.mingdao.com/post/replybyme";
+        /// <summary>
+        /// 回复我的
+        /// </summary>
+       public static string Replybyme
+       {
+           get { return AddTokenFormatJson(MDApi._replybyme); }
+           set { MDApi._replybyme = value; }
+       }
+           
+
+
+
        private static string _task_my_joined = "https://api2.mingdao.com/task/my_joined";
         /// <summary>
        /// 获取当前登录用户参与的任务列表
@@ -96,9 +130,17 @@ namespace mdPhone.Helper
         /// <returns></returns>
        private static string AddToken(string url)
        {
-           return url += "?access_token="+App.Token;;
+           return url += "?access_token="+App.Token;
        }
 
-
+       /// <summary>
+       /// 加上token
+       /// </summary>
+       /// <param name="url"></param>
+       /// <returns></returns>
+       private static string AddTokenFormatJson(string url)
+       {
+           return url += "?format=json&access_token=" + App.Token;
+       }
     }
 }
