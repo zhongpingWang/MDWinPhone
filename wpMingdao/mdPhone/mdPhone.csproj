@@ -207,8 +207,8 @@
     <Compile Include="View\TestPage\scrollLoad.xaml.cs">
       <DependentUpon>scrollLoad.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\user\main.xaml.cs">
-      <DependentUpon>main.xaml</DependentUpon>
+    <Compile Include="View\user\AccountSetting.xaml.cs">
+      <DependentUpon>AccountSetting.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\user\userInfo.xaml.cs">
       <DependentUpon>userInfo.xaml</DependentUpon>
@@ -311,7 +311,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\user\main.xaml">
+    <Page Include="View\user\AccountSetting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -494,6 +494,8 @@
     <Content Include="Images\post\replyMeTip.png" />
     <Content Include="Images\post\sysMsg.png" />
     <Content Include="Images\post\sysMsgTip.png" />
+    <Content Include="Images\user\add.png" />
+    <Content Include="Images\user\addGray.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="ref\ifunction.JPush.dll" />
     <Content Include="ref\jpush-api.dll" />

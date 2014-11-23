@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using mdPhone.Helper;
 using mdPhone.Model;
+using System.Windows.Media.Imaging;
 
 namespace mdPhone.View.user
 {
@@ -17,6 +18,18 @@ namespace mdPhone.View.user
         public main()
         {
             InitializeComponent();
+        }
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            UserInfo user = UserDataManager.LoadUserSettings();
+            userName.Text = user.username; 
+            Dispatcher.BeginInvoke(() =>
+            {
+                uerImg.Source = new BitmapImage(new Uri(user.userimage));
+            });
         }
 
         //退出登录

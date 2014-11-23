@@ -446,7 +446,6 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\post\AddPost.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\post\Post.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\TestPage\controlTest.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\TestPage\scrollLoad.g.cs
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\main.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.g.resources
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.Resources.AppResources.resources
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csproj.GenerateResource.Cache
@@ -459,3 +458,4 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\MainPost.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\JPushSDK-v1.0.2.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Newtonsoft.Json.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\userInfo.g.cs
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\AccountSetting.g.cs

@@ -357,5 +357,15 @@ namespace mdPhone.View
 
         }
 
+        /// <summary>
+        ///账号设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void loginOutSettings_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/user/AccountSetting.xaml", UriKind.Relative));
+        }
+
     }
 }

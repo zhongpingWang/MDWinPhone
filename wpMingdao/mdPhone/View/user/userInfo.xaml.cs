@@ -72,9 +72,7 @@ namespace mdPhone.View.user
                 loading.Visibility = Visibility.Collapsed;
             });
            
-        }
-
-
+        } 
 
 
         private void togglePush_Click(object sender, RoutedEventArgs e)
