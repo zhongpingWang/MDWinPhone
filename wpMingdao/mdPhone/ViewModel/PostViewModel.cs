@@ -12,7 +12,7 @@ namespace mdPhone.ViewModel
    public class PostViewModel
     {
         //获取token
-        public static void GetNewPost(PostEnum postEnum, HttpWeb.callbackResult callback)
+        public static void GetNewPost(PostEnum postEnum,string pageSize,string since_id, HttpWeb.callbackResult callback)
         {
             string uriStr = string.Empty;
             if (postEnum==PostEnum.PostAll)
@@ -26,6 +26,11 @@ namespace mdPhone.ViewModel
             {
                 uriStr = MDApi.Replybyme;
             }
+            //Dictionary<string, string> parm = new Dictionary<string, string>() 
+            //{ 
+            //    {"pagesize",pageSize},
+            //     {"since_id",since_id}
+            //}; 
             HttpWeb.CreateGetHttpResponse(uriStr, null, callback);
         }
 

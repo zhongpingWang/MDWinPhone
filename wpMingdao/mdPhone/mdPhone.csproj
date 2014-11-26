@@ -131,8 +131,6 @@
     <Compile Include="Model\calendar\calendarList.cs" />
     <Compile Include="Model\calendar\calendars.cs" />
     <Compile Include="Model\passport\Unreadcount.cs" />
-    <Compile Include="Model\post\groups.cs" />
-    <Compile Include="Model\post\Post.cs" />
     <Compile Include="Model\post\PostEnum.cs" />
     <Compile Include="Model\post\Posts.cs" />
     <Compile Include="Model\post\Tag.cs" />

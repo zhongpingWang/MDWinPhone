@@ -16,9 +16,65 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" Width="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
+    <phone:PhoneApplicationPage.Resources>
+        <Style TargetType="ScrollViewer">
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollViewer">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ScrollStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition GeneratedDuration="00:00:00.5"/>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Scrolling">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="VerticalScrollBar" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
+                                            <DoubleAnimation Storyboard.TargetName="HorizontalScrollBar" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="NotScrolling">
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="VerticalCompression">
+                                    <VisualState x:Name="NoVerticalCompression"/>
+                                    <VisualState x:Name="CompressionTop"/>
+                                    <VisualState x:Name="CompressionBottom"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="HorizontalCompression">
+                                    <VisualState x:Name="NoHorizontalCompression"/>
+                                    <VisualState x:Name="CompressionLeft"/>
+                                    <VisualState x:Name="CompressionRight"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid Margin="{TemplateBinding Padding}">
+                                <ScrollContentPresenter x:Name="ScrollContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                                <ScrollBar x:Name="VerticalScrollBar" IsHitTestVisible="False" Height="Auto" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" IsTabStop="False" Maximum="{TemplateBinding ScrollableHeight}" Minimum="0" Value="{TemplateBinding VerticalOffset}" Orientation="Vertical" ViewportSize="{TemplateBinding ViewportHeight}" />
+                                <ScrollBar x:Name="HorizontalScrollBar" IsHitTestVisible="False" Width="Auto" Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" IsTabStop="False" Maximum="{TemplateBinding ScrollableWidth}" Minimum="0" Value="{TemplateBinding HorizontalOffset}" Orientation="Horizontal" ViewportSize="{TemplateBinding ViewportWidth}" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
+        <Storyboard x:Name="AnimateTextSB" Completed="AnimateTextSB_Completed">
+            <DoubleAnimation x:Name="FontAnimation" From="30" To="50" Duration="0:0:0.9" Storyboard.TargetProperty="(TextBlock.FontSize)"/>
+            <ColorAnimation x:Name="FontColorAnimation" From="White" To="Green" Duration="0:0:0.9" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+        </Storyboard>
+        <Storyboard x:Name="AnimateSqueezeTextSB">
+            <DoubleAnimation x:Name="FontAnimationSqueeze" From="30" To="50" Duration="0:0:0.9" Storyboard.TargetProperty="(TextBlock.FontSize)" AutoReverse="True"/>
+            <ColorAnimation x:Name="FontColorAnimationSqueeze" From="White" To="Green" Duration="0:0:0.9" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
     <!--页面过渡效果-->
     <toolkit:TransitionService.NavigationInTransition>
         <toolkit:NavigationInTransition>
@@ -41,12 +97,12 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <phone:PhoneApplicationPage.Resources>
+    <!--<phone:PhoneApplicationPage.Resources>
         <textPostConvert:textConvert x:Key="textConvert" />
-    </phone:PhoneApplicationPage.Resources>
+    </phone:PhoneApplicationPage.Resources>-->
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Width="480" ManipulationDelta="ContentPanel_ManipulationDelta">
+    <Grid x:Name="LayoutRoot" Width="480" ManipulationDelta="ContentPanel_ManipulationDelta" ManipulationCompleted="LayoutRoot_ManipulationCompleted">
         <Grid.RowDefinitions> 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -54,11 +110,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
         </Grid.Background>
-
-        
-     
-        <!--ContentPanel - 在此处放置其他内容-->
-        <Grid x:Name="ContentPanel" Grid.Row="1"  Margin="0,0,0,0"> 
+      
+       
+        <!--<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,30">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -67,35 +121,42 @@
                 <ColumnDefinition Width="480"></ColumnDefinition>
                 <ColumnDefinition Width="85"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
-            <ProgressBar IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
+            <ProgressBar VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
             <ProgressBar Grid.Row="0" Grid.Column="0" IsIndeterminate="True" Name="fristLoad"/>
+            <TextBlock Name="title">动态更新</TextBlock>
 
 
-            <ListBox Grid.Column="0" Grid.Row="0"   Name="postListBox" Width="480" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto">
-                <ListBox.ItemTemplate>
+            <ctrls:ListBox2 x:Name="postListBox" >
+                <ctrls:ListBox2.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="0,32,0,0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                        
+                        
+                        <StackPanel Margin="12,24,0,0">
+                            
+                            <StackPanel Orientation="Horizontal">
+                                <Image    VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
 
+                                <TextBlock  FontSize="24"  Text="{Binding user.name}"></TextBlock>
+                                <TextBlock    FontSize="24"  Text="{Binding create_time}"></TextBlock>
+                                <TextBlock    FontSize="24"  Text="{Binding text}" Visibility="Collapsed"></TextBlock>
+                            </StackPanel>
+                            
+                            <StackPanel>
+                                <RichText:RichTextBoxExt  Width="460"   FontSize="24"   Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
+                            </StackPanel>
+                           
+                            <StackPanel>
+                                <HyperlinkButton VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
 
-                            <Image Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
+                            </StackPanel>
 
-                            <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
-                            <RichText:RichTextBoxExt Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
-
-                            <HyperlinkButton Margin="0,25,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
-
-                        </Grid>
+                        </StackPanel>
                     </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                </ctrls:ListBox2.ItemTemplate>
+            </ctrls:ListBox2>
+
+
+
 
             <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
                 <Image MouseLeftButtonUp="breakPost_mouseup" Tag="all" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="50" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
@@ -121,11 +182,31 @@
 
             </StackPanel>
 
-            <!--<ListBox  Name="postsImtes" Width="480" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+
+        </Grid>-->
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Margin="0,0,0,0"> 
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480"></ColumnDefinition>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ProgressBar VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" IsIndeterminate="True" Visibility="Visible" Name="getNew"/>
+            <ProgressBar Grid.Row="0" Grid.Column="0" IsIndeterminate="True" Name="fristLoad"/>
+            <TextBlock Name="title" FontSize="36" Margin="12,12,0,0"  Grid.Column="0" Grid.Row="0" >动态更新</TextBlock>
+
+            <ListBox Margin="0,45,0,0" Grid.Row="0" Grid.Column="0"  Name="postListBox" Width="480" VerticalAlignment="Top">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="0,32,0,0">
+                        <Grid Margin="0,32,0,0" ManipulationDelta="ContentPanel_ManipulationDelta">
                             <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -133,28 +214,67 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <Image Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
+                            <Image Margin="30,0,0,0" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
 
-                            <TextBlock Margin="45,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
+                            <TextBlock Margin="90,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
 
-                            <TextBlock Margin="0,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#ffffff" Cursor="Hand" >
+                            <TextBlock Margin="240,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding create_time}"></TextBlock>
 
-                            </TextBlock>
+                            <RichText:RichTextBoxExt Margin="15,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
+
+                           
+                            <HyperlinkButton Margin="0,25,25,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
+
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
-            </ListBox>-->
+            
+            </ListBox>
+
+            <Button Name="loadMore" Visibility="Collapsed" Width="300" Height="45" VerticalAlignment="Bottom">加载更多</Button>
+
+
+
+
+            <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
+                <Image MouseLeftButtonUp="breakPost_mouseup" Tag="all" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="50" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">动态更新</TextBlock>
+
+                <Image MouseLeftButtonUp="breakPost_mouseup" Tag="sys" Name="sysMsgImg" Source="/Images/post/sysMsg.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">系统消息</TextBlock>
+
+                <Image Tag="at" MouseLeftButtonUp="breakPost_mouseup" Name="atMeImg" Source="/Images/post/atMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">提到我的</TextBlock>
+
+                <Image Tag="reply" MouseLeftButtonUp="breakPost_mouseup" Name="replyMeImg" Source="/Images/post/replyMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">回复我的</TextBlock>
+
+                <Image Tag="privateChat" MouseLeftButtonUp="breakPost_mouseup" Source="/Images/post/privateChat.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">私聊</TextBlock>
+
+                <Image Tag="allChat" MouseLeftButtonUp="breakPost_mouseup" Source="/Images/post/allChat.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">群聊</TextBlock>
+
+                <Image Name="refresh" Source="/Images/post/refresh.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">刷新</TextBlock>
+
+            </StackPanel>
+ 
 
 
  
         </Grid>
+        
+        
+        
+        
     </Grid>
-    <phone:PhoneApplicationPage.ApplicationBar>
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.8">
             <shell:ApplicationBarIconButton x:Name="add_post" IconUri="Assets/AppBar/add_post.png"
                                              
                                             Text="发表动态" IsEnabled="True" Click="add_post_Click"></shell:ApplicationBarIconButton>
              
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
 </phone:PhoneApplicationPage>

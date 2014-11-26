@@ -318,7 +318,7 @@ namespace mdPhone.Controls
             {
                 DependencyObject current = childQueue.Dequeue();
 
-                System.Diagnostics.Debug.WriteLine(current.GetType().ToString());
+               // System.Diagnostics.Debug.WriteLine(current.GetType().ToString());
 
                 T result = current as T;
                 if (result != null && result != container)

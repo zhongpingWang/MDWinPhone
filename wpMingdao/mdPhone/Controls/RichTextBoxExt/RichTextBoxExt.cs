@@ -69,7 +69,7 @@ namespace mdPhone.Controls.RichTextBoxExt
 
                 //这里链接用蓝色显示，不加下划线（注意，这里使用系统的浏览器IE打开）
                 input = input.Replace(m.Value.Substring(0, m.Value.Length),
-                    string.Format(@"<Hyperlink NavigateUri=""{0}"" MouseOverTextDecorations=""None"" MouseOverForeground=""Blue"" Foreground=""Blue"" TargetName=""_blank"" >{0}</Hyperlink>",
+                    string.Format(@"<Hyperlink NavigateUri=""{0}"" MouseOverTextDecorations=""None"" MouseOverForeground=""Blue"" Foreground=""#FF0D143E"" TargetName=""_blank"" >{0}</Hyperlink>",
                         m.Value));
 
                 matchs.Add(m.Value);
@@ -85,7 +85,7 @@ namespace mdPhone.Controls.RichTextBoxExt
                 string userName = rPost.Split('|')[1];
                 //return "@" + userName;
 
-                return string.Format(@"<Span Foreground=""#0066CC"">@{0}</Span> ", userName);
+                return string.Format(@"<Span Foreground=""#FF0D143E"">@{0}</Span> ", userName);
 
                 //return string.Format(@"<Hyperlink    Foreground=""#0066cc"">@{0}</Hyperlink>", userName);
 
@@ -100,7 +100,7 @@ namespace mdPhone.Controls.RichTextBoxExt
                 string group = rPost2.Split('|')[1];
                 //return "@" + userName;
 
-                return string.Format(@"<Span Foreground=""#0066CC"" >@{0}</Span> ", group); 
+                return string.Format(@"<Span Foreground=""#FF0D143E"" >@{0}</Span> ", group); 
             });
 
             //表情字典

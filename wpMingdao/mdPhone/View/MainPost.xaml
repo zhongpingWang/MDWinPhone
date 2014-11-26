@@ -77,8 +77,8 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image MouseLeftButtonUp="breakPost_mouseup" Tag="all" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0"></Image>
-            <TextBlock Name="PostAll" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" Foreground="White" ></TextBlock>
+            <Image MouseLeftButtonUp="breakPost_mouseup" Tag="PostAll" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0"></Image>
+            <TextBlock Name="allMsg" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" Foreground="White" ></TextBlock>
             <TextBlock Text="全部消息" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Foreground="White" ></TextBlock>
 
 
