@@ -218,7 +218,7 @@ namespace mdPhone.Helper
                 int i = 0;
                 foreach (string key in parameters.Keys)
                 {
-                    if (i > 0)
+                    if (url.IndexOf("?")>-1)
                     {
                         buffer.AppendFormat("&{0}={1}", key, parameters[key]);
                     }

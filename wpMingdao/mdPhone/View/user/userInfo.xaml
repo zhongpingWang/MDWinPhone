@@ -126,8 +126,8 @@
                 <!--枢轴项二-->
                 <phone:PivotItem Header="通知设置">
                     <Grid>
-                        <toolkit:ToggleSwitch    Name="togglePush" Header="push通知" Content="On" IsChecked="true" Click="togglePush_Click"></toolkit:ToggleSwitch>
-                         
+                        <toolkit:ToggleSwitch    Name="togglePush" Header="push通知" Content="On" IsChecked="true" IsEnabled="False" />
+
                     </Grid>
                 </phone:PivotItem>
             </phone:Pivot>

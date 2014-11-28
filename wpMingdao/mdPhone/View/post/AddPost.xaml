@@ -14,11 +14,14 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot"   ManipulationDelta="ContentPanel_ManipulationDelta" ManipulationCompleted="LayoutRoot_ManipulationCompleted">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
+        </Grid.Background>
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
@@ -27,28 +30,36 @@
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Margin="0,60,0,0">
+
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
-              
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="480"></ColumnDefinition>
+                <ColumnDefinition Width="85"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBox Name="postText" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True" Text="请输入动态内容…" FontSize="18"  />
-            
+
+            <TextBox Name="postText" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True" Text="请输入动态内容…" FontSize="18" GotFocus="TextBox_GotFocus" LostFocus="postText_LostFocus" />
+            <ProgressBar Grid.Row="0" Visibility="Collapsed" Grid.Column="0" IsIndeterminate="True" Name="fristLoad"/>
            
-        </Grid>
-    </Grid>
+  
+            <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
 
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.8">
-            <shell:ApplicationBarIconButton x:Name="add_post" IconUri="Assets/AppBar/send_post.png"
-                                             
-                                            Text="发表动态" IsEnabled="True" Click="add_post_Click"></shell:ApplicationBarIconButton>
+                <RadioButton VerticalAlignment="Bottom" Name="allUser" Content="" HorizontalAlignment="Center" GroupName="s_type"  Grid.Row="0" Grid.Column="0" IsChecked="True" />              
+                <TextBlock HorizontalAlignment="Center">所有同事</TextBlock>
 
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+                <RadioButton VerticalAlignment="Bottom"  Content="" HorizontalAlignment="Center" GroupName="s_type"  Grid.Row="0" Grid.Column="0"   />
+                <TextBlock HorizontalAlignment="Center">我自己</TextBlock>
 
+                <Image Tag="at" MouseLeftButtonUp="add_post_Click" Name="atMeImg" Source="/Assets/AppBar/add_post.png" Width="50" Margin="0,425,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">发表动态</TextBlock>
+ 
+            </StackPanel> 
+
+        </Grid> 
+
+       
+    </Grid> 
 
 </phone:PhoneApplicationPage>

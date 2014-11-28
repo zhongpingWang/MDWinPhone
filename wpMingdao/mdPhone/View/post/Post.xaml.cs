@@ -20,21 +20,27 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Controls.Primitives;
 using System.Collections;
+using System.Windows.Media.Imaging;
 
 namespace mdPhone.View
 {
     public partial class Post : PhoneApplicationPage
     {
-        private int pageIndex = 1;
+        private string since_id = "";
         private int pageSize = 35;
-        private ObservableCollection<List<posts>> PostAllData;
+        private string max_id = "";
+        private bool isMore = true;
+        private ObservableCollection<posts> PostAllData;
         public Post()
         {
             InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
+        { 
+          
+
+
             //string post = DataManager.LoadPostSettings("post");
             //if (!string.IsNullOrEmpty(post))
             //{
@@ -42,7 +48,7 @@ namespace mdPhone.View
             //    //已有数据 取消中间加载
             //    fristLoad.Visibility = Visibility.Collapsed;
             //}
-            PostAllData = new ObservableCollection<List<posts>>();
+            PostAllData = new ObservableCollection<posts>();
             //第一次取消头部 刷新
             getNew.Visibility = Visibility.Collapsed;
             //获取参数
@@ -61,9 +67,21 @@ namespace mdPhone.View
         /// </summary>
         private void getPostByType(string type)
         {
+            Dictionary<string, string> parm = new Dictionary<string, string>();
             if (type == "PostAll")
             {
+                if (!string.IsNullOrEmpty(max_id))
+                {
+                    //parm.Add("since_id",since_id);
+                    parm.Add("max_id", max_id);
+                    parm.Add("pagesize", pageSize.ToString());
+                }
+                else
+                {
+                    parm.Add("pagesize", pageSize.ToString());
+                }
                 postenum = PostEnum.PostAll;
+                PostViewModel.GetUlity(postenum, parm, ResultNewPost);
             }
             else if (type == "Atme2")
             {
@@ -76,18 +94,56 @@ namespace mdPhone.View
             else
             {
                 postenum = PostEnum.PostAll;
+                PostViewModel.GetUlity(postenum, parm, ResultNewPost);
             }
-            PostViewModel.GetNewPost(postenum, pageSize.ToString(), "", ResultNewPost);
+            SelectImage(postenum);
+        }
 
+        private void SelectImage(PostEnum selTab) {
+            if (selTab==PostEnum.PostAll)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    allMsgImg.Source = new BitmapImage(new Uri("/Images/post/allMsgSel.png", UriKind.Relative));
+                    atMeImg.Source = new BitmapImage(new Uri("/Images/post/atMe.png", UriKind.Relative));
+                    replyMeImg.Source = new BitmapImage(new Uri("/Images/post/replyMe.png", UriKind.Relative));
+                });
+                
+            }
+            else if (selTab == PostEnum.Replybyme)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    allMsgImg.Source = new BitmapImage(new Uri("/Images/post/allMsg.png", UriKind.Relative));
+                    atMeImg.Source = new BitmapImage(new Uri("/Images/post/atMe.png", UriKind.Relative));
+                    replyMeImg.Source = new BitmapImage(new Uri("/Images/post/replyMeSel.png", UriKind.Relative));
+                });
+              
+            }
+            else if (selTab == PostEnum.Atme2)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    allMsgImg.Source = new BitmapImage(new Uri("/Images/post/allMsg.png", UriKind.Relative));
+                    atMeImg.Source = new BitmapImage(new Uri("/Images/post/atMeSel.png", UriKind.Relative));
+                    replyMeImg.Source = new BitmapImage(new Uri("/Images/post/replyMe.png", UriKind.Relative));
+                });
+                
+            } 
+            
         }
 
 
         public void ResultNewPost(string resutlt)
-        {
+        { 
             //错误信息 
             if (resutlt.IndexOf("error_code") > -1)
-            {
-                NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+            { 
+                Dispatcher.BeginInvoke(() =>
+                {
+                    MessageBox.Show("登录失效");
+                    NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+                }); 
             }
             else
             {
@@ -97,51 +153,47 @@ namespace mdPhone.View
                 MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(resutlt));
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(post.GetType());
                 post = ser.ReadObject(ms) as Posts;
-                PostAllData.Add(post.posts);
+                since_id = post.sincepostid;
+                max_id = post.sincepostid; 
+                isMore= Convert.ToBoolean(Convert.ToInt32(post.more));
+               // max_id=post.posts[post.posts.Count-1].id; 
+               
                 ms.Close();
                 ms.Dispose();
 
                 Dispatcher.BeginInvoke(() =>
                 {
-                    this.postListBox.ItemsSource = PostAllData[0]; //post.posts;
-                    fristLoad.Visibility = Visibility.Collapsed;
-                    getNew.Visibility = Visibility.Collapsed;
+                    foreach (var item in post.posts)
+                    {
+                        PostAllData.Add(item);
+                    } 
+                    this.postListBox.ItemsSource = PostAllData; //post.posts; 
 
                 });
+
+                ResultRefreshImage();
             }
         }
 
-        private void ResultLoadPostAll(string resultJson)
-        {
-            //DataManager.SaveUserInformation(resultJson, "post");
-            //resutlt 字符串中的 大小写 及名称和类中的一致
-            Posts post = new Posts();
-            MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(resultJson));
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(post.GetType());
-            post = ser.ReadObject(ms) as Posts;
-            ms.Close();
-            ms.Dispose();
-
-
+        private void ResultRefreshImage() {
             Dispatcher.BeginInvoke(() =>
             {
-                this.postListBox.ItemsSource = post.posts;
+                loadMoreIcon.Source = new BitmapImage(new Uri("/Images/post/loadMoreNew.png", UriKind.Relative));
+                refresh.Source = new BitmapImage(new Uri("/Images/post/refresh.png", UriKind.Relative));
                 fristLoad.Visibility = Visibility.Collapsed;
                 getNew.Visibility = Visibility.Collapsed;
-
             });
-
+           
         }
 
 
-
-
-
+      
 
         //回复
         private void replyPost_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("This is a reply");
+        { 
+            HyperlinkButton hb=sender as HyperlinkButton;  
+            NavigationService.Navigate(new Uri("/View/post/ReplyPost.xaml?id="+hb.Tag.ToString(), UriKind.Relative)); 
         }
 
         //新增动态
@@ -175,10 +227,7 @@ namespace mdPhone.View
                 mLeft = 0;
             }
 
-            ContentPanel.Margin = new Thickness(mLeft, 0, 0, 0);
-
-
-
+            ContentPanel.Margin = new Thickness(mLeft, 0, 0, 0); 
         }
 
         private void LayoutRoot_ManipulationCompleted(object sender, ManipulationCompletedEventArgs e)
@@ -197,260 +246,60 @@ namespace mdPhone.View
             ContentPanel.Margin = new Thickness(mLeft, 0, 0, 0);
         }
 
-
-        private void postListBox_MouseMove(object sender, MouseEventArgs e)
+        /// <summary>
+        /// 加载更多
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void loadMoreIcon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            //获取listbox的子类型ScrollViewer 
-            //  ScrollViewer scrollViewer = FindChildOfType<ScrollViewer>(postListBox);//ScrollViewer  scrollBar
-            if (scrollViewer == null)
+            if (getNew.Visibility == Visibility.Visible)
             {
-                throw new InvalidOperationException("erro");
-            }
-            else
-            {
-               // title.Text = scrollViewer.VerticalOffset.ToString();
-                //判断当前滚动的高度是否大于或者等于scrollViewer实际可滚动高度，如果等于或者大于就证明到底了
-                //if (scrollViewer.VerticalOffset + 2 >= scrollViewer.ScrollableHeight)
-                //{
-                //    //处理listbox滚动到底的事情
-                //    loadMore.Visibility = Visibility.Visible;
-                //}
-                //else {
-                //    loadMore.Visibility = Visibility.Collapsed;
-                //}
-            }
-        }
-
-
-        private void postListBox_ManipulationCompleted(object sender, ManipulationCompletedEventArgs e)
-        {
-
-            //判断当前滚动的高度是否大于或者等于scrollViewer实际可滚动高度，如果等于或者大于就证明到底了
-            if (scrollViewer.VerticalOffset + 2 >= scrollViewer.ScrollableHeight)
-            {
-                //处理listbox滚动到底的事情
-                loadMore.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                loadMore.Visibility = Visibility.Collapsed;
-            }
-        }
-
-
-        ScrollViewer scrollViewer;
-        private TextBlock _activeTxb = null;
-        private ScrollBar sb = null;
-        private ScrollViewer sv = null;
-        private bool _isBouncy = false;
-        private bool alreadyHookedScrollEvents = false;
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            if (alreadyHookedScrollEvents)
                 return;
-
-            alreadyHookedScrollEvents = true;
-            //postListBox.AddHandler(ListBox.ManipulationCompletedEvent, (EventHandler<ManipulationCompletedEventArgs>)LB_ManipulationCompleted, true);
-            sb = (ScrollBar)FindElementRecursive(postListBox, typeof(ScrollBar));
-            sv = (ScrollViewer)FindElementRecursive(postListBox, typeof(ScrollViewer));
-
-            if (sv != null)
+            }
+            if (isMore)
             {
-                // Visual States are always on the first child of the control template 
-                FrameworkElement element = VisualTreeHelper.GetChild(sv, 0) as FrameworkElement;
-                if (element != null)
+                Dispatcher.BeginInvoke(() =>
                 {
-                    VisualStateGroup group = FindVisualState(element, "ScrollStates");
-                    if (group != null)
-                    {
-                        group.CurrentStateChanging += new EventHandler<VisualStateChangedEventArgs>(group_CurrentStateChanging);
-                    }
-                    VisualStateGroup vgroup = FindVisualState(element, "VerticalCompression");
-                    VisualStateGroup hgroup = FindVisualState(element, "HorizontalCompression");
-                    if (vgroup != null)
-                    {
-                        vgroup.CurrentStateChanging += new EventHandler<VisualStateChangedEventArgs>(vgroup_CurrentStateChanging);
-                    }
-                    if (hgroup != null)
-                    {
-                        hgroup.CurrentStateChanging += new EventHandler<VisualStateChangedEventArgs>(hgroup_CurrentStateChanging);
-                    }
+                    getNew.Visibility = Visibility.Visible; 
+                    loadMoreIcon.Source = new BitmapImage(new Uri("/Images/post/loadMoreNewSel.png", UriKind.Relative));
+                });
+
+
+                if (postenum == PostEnum.PostAll)
+                {
+                    getPostByType("PostAll");
                 }
             }
-
-            ////获取listbox的子类型ScrollViewer
-            //scrollViewer = FindChildOfType<ScrollViewer>(postListBox);//ScrollViewer  scrollBar
-            //if (scrollViewer == null)
-            //{
-            //    throw new InvalidOperationException("erro");
-            //}
-            //else
-            //{
-            //    scrollViewer.MouseMove += postListBox_MouseMove;
-            //    // scrollViewer.ManipulationCompleted += postListBox_ManipulationCompleted;
-            //}
+          
+           
         }
 
-
-        private void hgroup_CurrentStateChanging(object sender, VisualStateChangedEventArgs e)
+        private void refresh_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (e.NewState.Name == "CompressionLeft")
+            if (getNew.Visibility==Visibility.Visible)
             {
-                //NoHCompression
-                //HCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-                //LEFT
-                // LeftTxb.Foreground = new SolidColorBrush(Colors.Green);
+                return;
             }
 
-            if (e.NewState.Name == "CompressionRight")
+            Dispatcher.BeginInvoke(() =>
             {
-                //NoHCompression
-                //HCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-                //right
-                //RightTxb.Foreground = new SolidColorBrush(Colors.Green);
-            }
-            if (e.NewState.Name == "NoHorizontalCompression")
+                getNew.Visibility = Visibility.Visible;
+                refresh.Source = new BitmapImage(new Uri("/Images/post/refreshSel.png", UriKind.Relative)); 
+            });
+            
+            since_id = "";
+            max_id = "";
+            PostAllData = new ObservableCollection<posts>();
+            if (postenum == PostEnum.PostAll)
             {
-                //left
-                //LeftTxb.Foreground = new SolidColorBrush(Colors.White);
-                //right
-                // RightTxb.Foreground = new SolidColorBrush(Colors.White);
-                //NoHCompression
-                //  HCompressionTxb.Foreground = new SolidColorBrush(Colors.Green);
+                getPostByType("PostAll");
             }
         }
-        private void vgroup_CurrentStateChanging(object sender, VisualStateChangedEventArgs e)
-        {
-            if (e.NewState.Name == "CompressionTop")
-            {
-                //NoVCompression
-                // VCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-                //top
-                //TopTxb.Foreground = new SolidColorBrush(Colors.Green);
-            }
 
-            if (e.NewState.Name == "CompressionBottom")
-            {
-                loadMore.Visibility = Visibility.Visible;
+       
 
-                // VCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-                // BottomTxb.Foreground = new SolidColorBrush(Colors.Green);
-
-                /*
-                 * As an example, this is where you can add code to load new items, have the progress bar animation and so on
-                 *                  
-                 */
-            }
-            if (e.NewState.Name == "NoVerticalCompression")
-            {
-                //loadMore.Visibility = Visibility.Collapsed;
-                //TopTxb.Foreground = new SolidColorBrush(Colors.White);
-                //BottomTxb.Foreground = new SolidColorBrush(Colors.White);
-                // VCompressionTxb.Foreground = new SolidColorBrush(Colors.Green);
-            }
-        }
-        private void group_CurrentStateChanging(object sender, VisualStateChangedEventArgs e)
-        {
-            if (e.NewState.Name == "Scrolling")
-            {
-                //string s;
-                // isScrollingTxb.Foreground = new SolidColorBrush(Colors.Green);
-                //AnimateText(scrollStartedTxb);
-            }
-            else
-            {
-                //string v;
-                // isScrollingTxb.Foreground = new SolidColorBrush(Colors.White);
-                // AnimateText(scrollCompletedTxb);
-            }
-        }
-        //private void AnimateText(TextBlock target)
-        //{
-        //    _activeTxb = target;
-        //    AnimateTextSB.Stop();
-        //    Storyboard.SetTargetName(FontAnimation, target.Name);
-        //    Storyboard.SetTargetName(FontColorAnimation, target.Name);
-        //    FontAnimation.AutoReverse = true;
-        //    AnimateTextSB.Begin();
-        //}
-
-
-
-        //ManipulationCompletedEvent
-        private void LB_ManipulationCompleted(object sender, ManipulationCompletedEventArgs e)
-        {
-            //isScrollingTxb.Foreground = new SolidColorBrush(Colors.White);
-            //VCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-            // HCompressionTxb.Foreground = new SolidColorBrush(Colors.White);
-        }
-
-
-
-
-        private UIElement FindElementRecursive(FrameworkElement parent, Type targetType)
-        {
-            int childCount = VisualTreeHelper.GetChildrenCount(parent);
-            UIElement returnElement = null;
-            if (childCount > 0)
-            {
-                for (int i = 0; i < childCount; i++)
-                {
-                    Object element = VisualTreeHelper.GetChild(parent, i);
-                    if (element.GetType() == targetType)
-                    {
-                        return element as UIElement;
-                    }
-                    else
-                    {
-                        returnElement = FindElementRecursive(VisualTreeHelper.GetChild(parent, i) as FrameworkElement, targetType);
-                    }
-                }
-            }
-            return returnElement;
-        }
-        private VisualStateGroup FindVisualState(FrameworkElement element, string name)
-        {
-            if (element == null)
-                return null;
-
-            IList groups = VisualStateManager.GetVisualStateGroups(element);
-            foreach (VisualStateGroup group in groups)
-                if (group.Name == name)
-                    return group;
-
-            return null;
-        }
-
-        //获取子类型
-        static T FindChildOfType<T>(DependencyObject root) where T : class
-        {
-            var queue = new Queue<DependencyObject>();
-            queue.Enqueue(root);
-
-            while (queue.Count > 0)
-            {
-                DependencyObject current = queue.Dequeue();
-                for (int i = VisualTreeHelper.GetChildrenCount(current) - 1; 0 <= i; i--)
-                {
-                    var child = VisualTreeHelper.GetChild(current, i);
-                    var typedChild = child as T;
-                    if (typedChild != null)
-                    {
-                        return typedChild;
-                    }
-                    queue.Enqueue(child);
-                }
-            }
-            return null;
-        }
-
-
-        private void AnimateTextSB_Completed(object sender, EventArgs e)
-        {
-            _activeTxb.FontSize = 30;
-            _activeTxb.Foreground = new SolidColorBrush(Colors.White);
-        }
+     
 
 
     }

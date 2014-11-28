@@ -52,7 +52,9 @@ namespace mdPhone.Controls.RichTextBoxExt
             {
                 return new Paragraph();
             }
-
+            string ddd = input;
+            input = input.Replace("<", "《").Replace(">", "》");
+          
             //链接
             var mc = Regex.Matches(input, @"http(s)://[\x21-\x7e-[\s]]+|http(s)://[\x21-\x7e-[\s]]+|http(s)://[\x21-\x7e-[\s]]+$");
 
@@ -113,6 +115,7 @@ namespace mdPhone.Controls.RichTextBoxExt
                 builder.Append(key.Replace("[", @"\[").Replace("]", @"\]"));//.Replace("{", @"\{").Replace("}", @"\}"));
                 builder.Append("|");
             }
+            input = input.Replace("-", "").Replace("&", "and").Replace("\n", @"<LineBreak/>");
             //定义一个Regex对象实例
             var r = new Regex(builder.ToString().Substring(0, builder.Length - 1));
             mc = r.Matches(input);
@@ -127,8 +130,7 @@ namespace mdPhone.Controls.RichTextBoxExt
                                 </InlineUIContainer>
                     ", dict[m.Value]));
             }
-            input = input.Replace("<End>","{End}").Replace("-","").Replace("&","and");
-
+          
             var xaml = string.Format(@"<Paragraph 
                                         xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
                                         xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">

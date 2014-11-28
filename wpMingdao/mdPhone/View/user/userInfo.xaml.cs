@@ -7,7 +7,6 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using mdPhone.JPush;
 using mdPhone.ViewModel;
 using mdPhone.Model.user;
 using System.IO;
@@ -26,24 +25,7 @@ namespace mdPhone.View.user
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
-
-            UserInfoViewModel.UserDetail(getUserDetail);
-
-            UserSetting _setting = UserSetting.shareUserDefualt();
-            if (_setting.isOpenNotification)
-            {
-                togglePush.IsChecked = true;
-                togglePush.Content = "On";
-                // NotificationBox.Content = "开启";
-            }
-            else
-            {
-                togglePush.IsChecked = true;
-                togglePush.Content = "Off";
-
-            }
-           
+            base.OnNavigatedTo(e);  
         }
 
         private void getUserDetail(string userDetailJson) 
@@ -72,28 +54,7 @@ namespace mdPhone.View.user
                 loading.Visibility = Visibility.Collapsed;
             });
            
-        } 
-
-
-        private void togglePush_Click(object sender, RoutedEventArgs e)
-        {
-
-
-            if (togglePush.IsChecked == true)
-            {
-                togglePush.Content = "On";
-                JPushSDK.JServer.RegisterNotification();
-                UserSetting.shareUserDefualt().isOpenNotification = true;
-
-            }
-            else
-            {
-                JPushSDK.JServer.CloseNotification();
-                togglePush.Content = "Off";
-                UserSetting.shareUserDefualt().isOpenNotification = true;
-
-            }
-        }
+        }  
  
     }
 }

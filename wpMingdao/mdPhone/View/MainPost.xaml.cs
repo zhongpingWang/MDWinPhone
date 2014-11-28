@@ -18,9 +18,6 @@ using System.IO;
 using System.Text;
 using System.Runtime.Serialization.Json;
 using ImageTools;
-using mdPhone.JPush;
-using cn.jpush.api.common;
-using cn.jpush.api.push;
 
 namespace mdPhone.View
 {
@@ -28,26 +25,12 @@ namespace mdPhone.View
     {
         public MainPost()
         {
-            InitializeComponent();
-            this.Loaded += MainPage_Loaded;
+            InitializeComponent(); 
         } 
 
         //初始化
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-             
-
-            string registrationID = JPushSDK.JServer.GetRegisrtationID();
-            //获取是否是点击toast 进入程序
-            JPushSDK.JServer.HandleToastNotification(NavigationContext.QueryString);
-            //页面统计
-            JPushSDK.JServer.TrackPageInto("/view/MainPost");
-            if (registrationID != null && registrationID.Length > 0)
-            {
-                UserSetting.shareUserDefualt().registrationID = registrationID;
-                //TextRegistrationID.Text = registrationID;
-            }
-
+        {  
             UserInfo user = UserDataManager.LoadUserSettings();
             userName.Text = user.username;
             companyName.Text = user.CompanyName;
@@ -60,15 +43,7 @@ namespace mdPhone.View
             getPost.Visibility = Visibility.Visible;
             PassPortViewModel.Unreadcount(ResultNewPost);
             base.OnNavigatedTo(e);
-        }
-
-
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            //页面统计
-            JPushSDK.JServer.TrackPageOut("/view/MainPost");
-            base.OnNavigatedFrom(e);
-        }
+        } 
 
         private void breakPost_mouseup(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -83,7 +58,10 @@ namespace mdPhone.View
             //错误信息 
             if (resutlt.IndexOf("error_code") > -1)
             {
-                NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+                Dispatcher.BeginInvoke(() =>
+               {
+                   NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+               });
             }
             else
             {
@@ -92,18 +70,7 @@ namespace mdPhone.View
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(unreadCount.GetType());
                 unreadCount = ser.ReadObject(ms) as Unreadcount;
                 ms.Close();
-                ms.Dispose();
-
-                HashSet<DeviceEnum> set = new HashSet<DeviceEnum>();
-                set.Add(DeviceEnum.Winphone);
-                String master_secret = "c36c2aac03b8dd5c8f8a1f18";
-                PushClient client = new PushClient(master_secret, 0, set, true);
-                string extras = "{\"winphone\":{\"badge\":88, \"sound\":\"happy\"}}";
-                NotificationParams notifyParams = new NotificationParams();
-                notifyParams.ReceiverType = ReceiverTypeEnum.APP_KEY;
-                notifyParams.SendNo = 256;
-              //  client.sendNotification("ceshi", notifyParams, extras, pushCallabck);
-
+                ms.Dispose(); 
 
                 Dispatcher.BeginInvoke(() =>
                 {
@@ -117,8 +84,8 @@ namespace mdPhone.View
                         allMsgImg.Source = new BitmapImage(new Uri("/Images/post/allMsgTip.png", UriKind.Relative));
                         allMsg.Text = unreadCount.updated;
                         allMsg.Visibility = Visibility.Visible;
-                    
-                         
+
+
                     }
                     else
                     {
@@ -135,7 +102,7 @@ namespace mdPhone.View
                         sysMsg.Margin = new Thickness(0, 14, mRight, 0);
                         sysMsg.Text = unreadCount.sysmsg;
                         sysMsg.Visibility = Visibility.Visible;
-                       
+
                     }
                     else
                     {
@@ -151,15 +118,13 @@ namespace mdPhone.View
                         atMeImg.Source = new BitmapImage(new Uri("/Images/post/atMeTip.png", UriKind.Relative));
                         atMe.Margin = new Thickness(0, 14, mRight, 0);
                         atMe.Text = unreadCount.atme;
-                        atMe.Visibility = Visibility.Visible;
-                        
+                        atMe.Visibility = Visibility.Visible; 
                     }
                     else
                     {
                         atMeImg.Source = new BitmapImage(new Uri("/Images/post/atMe.png", UriKind.Relative));
                         atMe.Visibility = Visibility.Collapsed;
-                    }
-
+                    } 
 
 
                     //回复我的
@@ -171,7 +136,7 @@ namespace mdPhone.View
                         replyMe.Margin = new Thickness(0, 14, mRight, 0);
                         replyMe.Text = unreadCount.replyme;
                         replyMe.Visibility = Visibility.Visible;
-                       
+
                     }
                     else
                     {
@@ -184,69 +149,7 @@ namespace mdPhone.View
             }
         }
 
-        DateTime backTime = DateTime.Now;
-
-
-        private void pushCallabck(string result) 
-        {
-            string s = "";
-        }
-
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-            UserInfo user = UserDataManager.LoadUserSettings();
-            string alias = "user_" + user.id;//(string)TextAlias.Text;
-            //alias文本框中为空的情况，把alias设置为null，不改变先前设置的alias
-            if (alias.Length == 0)
-            {
-                alias = null;
-            }
-          
-
-            Button btn = sender as Button;
-            if (btn != null)
-            {
-                btn.IsEnabled = false;
-            }
-            //文本框中3个tag都为空的时候，将set设置为null，不改变先前配置tags
-            HashSet<string> set = new HashSet<string>();
-            
-            // set.Add("tag");
-            
-            if (set.Count == 0)
-                set = null;
-
-            //调用JPush SDK中的api
-            JPushSDK.JServer.SetTagsWithAlias(set, alias, (i, j, k) =>
-            {
-                string content = "result:" + i.ToString();
-                content += " tags：";
-                string tags;
-                if (j == null)
-                {
-                    tags = "null";
-                }
-                else if (j.Count == 0)
-                {
-                    tags = "tags is null";
-                }
-                else
-                {
-                    tags = string.Join<string>(",", j);
-                }
-                content += tags;
-                string strAlias = (k == null ? "null" : k);
-                content += (" alias：" + strAlias);
-                Deployment.Current.Dispatcher.BeginInvoke(() =>
-                { 
-
-                });
-
-            });
-        }
-
+        DateTime backTime = DateTime.Now; 
 
         //在按一次推出
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
@@ -334,89 +237,7 @@ namespace mdPhone.View
         private void uerImg_MouseLeftButtonUp_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new Uri("/View/user/userInfo.xaml", UriKind.Relative));
-        }
-
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {  //注册登陆状态
-            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidSetupNotification, (K) =>
-            {
-                Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    try
-                    {
-                       // TextConnectionState.Text = "建立连接";
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-                });
-            });
-            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidRegisterNotification, (K) =>
-            {
-                if (K != null && K.ContainsKey("RegistrationID"))
-                {
-                    UserSetting.shareUserDefualt().registrationID = (string)K["RegistrationID"];
-                    //TextRegistrationID.Text = (string)K["RegistrationID"];
-                }
-            });
-            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidLoginNotification, (K) =>
-            {
-                Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-
-                    try
-                    {
-                       // TextConnectionState.Text = "登陆成功";
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-                });
-            });
-            JPushSDK.NotificationCenter.AddNotification(JPushSDK.NotificationCenter.kNetworkDidCloseNotification, (K) =>
-            {
-                Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-
-                    try
-                    {
-                       // TextConnectionState.Text = "关闭连接";
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-                });
-            });
-            //访问全局的状态，确保如果没有一开始就进入MainPage也能显示正常的链接状态
-            //try
-            //{
-            //    switch (App.status)
-            //    {
-            //        case 1:
-            //            TextConnectionState.Text = "建立连接";
-            //            break;
-            //        case 2:
-            //            TextConnectionState.Text = "注册成功";
-            //            break;
-            //        case 3:
-            //            TextConnectionState.Text = "登陆成功";
-            //            break;
-            //        default:
-            //            TextConnectionState.Text = "关闭连接";
-            //            break;
-            //    }
-            //}
-            //catch (Exception)
-            //{
-
-            //}
-
-        }
+        } 
 
         /// <summary>
         ///账号设置

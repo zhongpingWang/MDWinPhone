@@ -27,7 +27,7 @@
             <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
         </Grid.Background>
 
-        <TextBlock Width="100" Text="zhongping.Wang" Height="10" VerticalAlignment="Top" HorizontalAlignment="Left" Name="mySelf" MouseLeftButtonUp="mySelf_MouseLeftButtonUp" Foreground="#FF5082B0" />
+        <TextBlock Width="100" Text="zhongping.Wang" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Name="mySelf" MouseLeftButtonUp="mySelf_MouseLeftButtonUp" Foreground="#FF5082B0" />
 
 
         <Grid x:Name="ContentPanel" HorizontalAlignment="Center" Width="400" ShowGridLines="False" Margin="40,80,40,194">

@@ -107,23 +107,6 @@
     <Compile Include="Helper\MDExpansion.cs" />
     <Compile Include="Helper\textConvert.cs" />
     <Compile Include="Helper\UserDataManager.cs" />
-    <Compile Include="JPush\common\BaseHttpClient.cs" />
-    <Compile Include="JPush\common\BaseResult.cs" />
-    <Compile Include="JPush\common\DeviceEnum.cs" />
-    <Compile Include="JPush\common\ResponseResult.cs" />
-    <Compile Include="JPush\push\JPushSDK.cs" />
-    <Compile Include="JPush\push\CustomMessageParams.cs" />
-    <Compile Include="JPush\push\MessageParams.cs" />
-    <Compile Include="JPush\push\MessageResult.cs" />
-    <Compile Include="JPush\push\NotificationParams.cs" />
-    <Compile Include="JPush\push\PushClient.cs" />
-    <Compile Include="JPush\report\ReceivedResult.cs" />
-    <Compile Include="JPush\report\ReportClient.cs" />
-    <Compile Include="JPush\util\Base64.cs" />
-    <Compile Include="JPush\util\JsonTool.cs" />
-    <Compile Include="JPush\util\Md5.cs" />
-    <Compile Include="JPush\util\md5Interface.cs" />
-    <Compile Include="JPush\util\StringUtil.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -140,7 +123,6 @@
     <Compile Include="Model\user\UserDetailInfo.cs" />
     <Compile Include="Model\user\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="JPush\UserSetting.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +181,9 @@
     </Compile>
     <Compile Include="View\post\Post.xaml.cs">
       <DependentUpon>Post.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\post\ReplyPost.xaml.cs">
+      <DependentUpon>ReplyPost.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TestPage\controlTest.xaml.cs">
       <DependentUpon>controlTest.xaml</DependentUpon>
@@ -299,6 +284,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\post\Post.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\post\ReplyPost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -481,17 +470,27 @@
     <Content Include="Images\mainIcon\We.png" />
     <Content Include="Assets\AppBar\add_post.png" />
     <Content Include="Images\post\allChat.png" />
+    <Content Include="Images\post\allChatSel.png" />
     <Content Include="Images\post\allChatTip.png" />
     <Content Include="Images\post\allMsg.png" />
+    <Content Include="Images\post\allMsgSel.png" />
     <Content Include="Images\post\allMsgTip.png" />
     <Content Include="Images\post\atMe.png" />
+    <Content Include="Images\post\atMeSel.png" />
     <Content Include="Images\post\atMeTip.png" />
+    <Content Include="Images\post\loadMore.png" />
+    <Content Include="Images\post\loadMoreNew.png" />
+    <Content Include="Images\post\loadMoreNewSel.png" />
     <Content Include="Images\post\privateChat.png" />
+    <Content Include="Images\post\privateChatSel.png" />
     <Content Include="Images\post\privateChatTip.png" />
     <Content Include="Images\post\refresh.png" />
+    <Content Include="Images\post\refreshSel.png" />
     <Content Include="Images\post\replyMe.png" />
+    <Content Include="Images\post\replyMeSel.png" />
     <Content Include="Images\post\replyMeTip.png" />
     <Content Include="Images\post\sysMsg.png" />
+    <Content Include="Images\post\sysMsgSel.png" />
     <Content Include="Images\post\sysMsgTip.png" />
     <Content Include="Images\user\add.png" />
     <Content Include="Images\user\addGray.png" />
@@ -545,10 +544,6 @@
     </Reference>
     <Reference Include="ImageTools.Utils">
       <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="JPushSDK-v1.0.2, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ref\JPushSDK-v1.0.2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">

@@ -33,7 +33,19 @@ namespace mdPhone.Helper
            get { return AddTokenFormatJson(MDApi._postAll); }
            set { MDApi._postAll = value; }
        }
-  
+
+       private static string add_reply = "https://api.mingdao.com/post/add_reply";
+        /// <summary>
+        /// 回复一条冬天
+        /// </summary>
+       public static string Add_reply
+       {
+           get { return AddTokenFormatJson(MDApi.add_reply); }
+           set { MDApi.add_reply = value; }
+       }
+
+            
+
 
 
        private static string _atme2 = "https://api.mingdao.com/post/atme_2";
@@ -57,6 +69,7 @@ namespace mdPhone.Helper
            set { MDApi._replybyme = value; }
        }
            
+
 
 
 
