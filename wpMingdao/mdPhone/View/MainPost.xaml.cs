@@ -249,5 +249,13 @@ namespace mdPhone.View
             NavigationService.Navigate(new Uri("/View/user/AccountSetting.xaml", UriKind.Relative));
         }
 
+        private void unfinishImg_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            new ToastPrompt()
+            {
+                Message = "火热开发中~"
+            }.Show();
+        }
+
     }
 }

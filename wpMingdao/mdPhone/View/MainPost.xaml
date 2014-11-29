@@ -83,7 +83,7 @@
 
 
 
-            <Image Tag="sys" Name="sysMsgImg" Source="/Images/post/sysMsg.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"></Image>
+            <Image Tag="sys" Name="sysMsgImg" Source="/Images/post/sysMsg.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" MouseLeftButtonUp="unfinishImg_MouseLeftButtonUp"></Image>
             <TextBlock Name="sysMsg" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" Foreground="White" ></TextBlock>
             <TextBlock Text="系统消息" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Foreground="White" ></TextBlock>
 
@@ -97,12 +97,12 @@
             <TextBlock Name="replyMe" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" Foreground="White" ></TextBlock>
             <TextBlock Text="回复我的" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Foreground="White" ></TextBlock>
 
-            <Image Tag="privateChat" Source="/Images/post/privateChat.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"></Image>
+            <Image Tag="privateChat" Source="/Images/post/privateChat.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" MouseLeftButtonUp="unfinishImg_MouseLeftButtonUp"></Image>
             <TextBlock Name="privateChat" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1" Foreground="White" ></TextBlock>
             <TextBlock Text="私聊" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Foreground="White" ></TextBlock>
 
 
-            <Image Tag="allChat" Source="/Images/post/allChat.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2"></Image>
+            <Image Tag="allChat" Source="/Images/post/allChat.png" Width="100" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" MouseLeftButtonUp="unfinishImg_MouseLeftButtonUp"></Image>
             <TextBlock Name="allChat" Text="5" Visibility="Collapsed" VerticalAlignment="Top" Margin="0,14,45,0" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="2" Foreground="White" ></TextBlock>
             <TextBlock Text="群聊" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" Foreground="White" ></TextBlock>
 
