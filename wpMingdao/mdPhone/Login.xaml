@@ -25,9 +25,7 @@
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
             <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
-        </Grid.Background>
-
-        <TextBlock Width="100" Text="zhongping.Wang" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Name="mySelf" MouseLeftButtonUp="mySelf_MouseLeftButtonUp" Foreground="#FF5082B0" />
+        </Grid.Background> 
 
 
         <Grid x:Name="ContentPanel" HorizontalAlignment="Center" Width="400" ShowGridLines="False" Margin="40,80,40,194">
@@ -75,6 +73,13 @@
             </Grid>
         </Grid> 
 
+        <StackPanel Name="vBox" Visibility="Collapsed" Margin="30,0,0,0" VerticalAlignment="Bottom" Orientation="Horizontal">
+            <TextBlock Height="32">验证码</TextBlock>
+            <TextBox Name="vCode" Width="120" FontSize="16" Margin="12,0,0,0" Height="32"></TextBox>
+            <Image Name="vImg" Height="32" Margin="12,0,0,0"  Source="" />
+        </StackPanel>
+        
+        
 
         <Grid x:Name="loginAnimate" Width="480"  Visibility="Collapsed"  HorizontalAlignment="Center"  ShowGridLines="False" Margin="0,0,0,0">
             <Grid.Background>

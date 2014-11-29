@@ -89,7 +89,7 @@
 
                             <Image Margin="30,0,0,0" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}"></Image>
 
-                            <TextBlock Margin="90,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
+                            <TextBlock Width="120" HorizontalAlignment="Left" Margin="90,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
 
                             <TextBlock Margin="240,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding create_time}"></TextBlock>
 
@@ -105,17 +105,70 @@
             </ListBox>
 
 
+
+            <ListBox Margin="0,65,0,0" Visibility="Collapsed" Grid.Row="0" Grid.Column="0"  Name="replyListBox" Width="480" VerticalAlignment="Top">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,32,0,0" ManipulationDelta="ContentPanel_ManipulationDelta">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Image Margin="30,0,0,0" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding user.avstar}">
+                                <Image.Clip>
+                                    <EllipseGeometry Center="18,18" RadiusX="18" RadiusY="18" />
+                                </Image.Clip>
+                            </Image>
+
+                            <TextBlock Width="120" HorizontalAlignment="Left" Margin="90,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding user.name}"></TextBlock>
+
+                            <TextBlock Margin="240,0,0,0" Grid.Row="0"  FontSize="24"  Grid.Column="0" Text="{Binding create_time}"></TextBlock>
+
+                            <RichText:RichTextBoxExt Margin="15,40,0,0" Width="460" TextWrapping="Wrap" Grid.Row="0"  FontSize="24"  Grid.Column="0"  Tag="{Binding ProjectID}" Text="{Binding text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
+
+                            
+                            <StackPanel Grid.Column="0" Grid.Row="1" Margin="30,15,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>回复：</TextBlock>
+                                    <!--<Image Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Height="36" Source="{Binding ref2.post.user.avstar}">
+                                        <Image.Clip>
+                                            <EllipseGeometry Center="18,18" RadiusX="18" RadiusY="18" />
+                                        </Image.Clip>
+                                    </Image>-->
+                                    <TextBlock Width="120" HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding ref2.post.user.name}"></TextBlock>
+                                </StackPanel> 
+                                <StackPanel>
+                                    <RichText:RichTextBoxExt Margin="0,5,0,0" Width="430" TextWrapping="Wrap" Tag="{Binding ProjectID}" Text="{Binding ref2.post.text}" Foreground="#FFFFFF" Cursor="Hand"></RichText:RichTextBoxExt>
+                                </StackPanel> 
+                            </StackPanel>
+
+                            <HyperlinkButton Margin="0,25,25,0"   Tag="{Binding ref2.post.guid}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0"  Content="回复" Name="replyPost" Click="replyPost_Click"  />
+
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+
+
+
             <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
-                <Image MouseLeftButtonUp="breakPost_mouseup" Tag="all" Name="allMsgImg" Source="/Images/post/allMsg.png" Width="50" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <Image Tag="PostAll" MouseLeftButtonUp="breakPost_mouseup"  Name="allMsgImg" Source="/Images/post/allMsg.png" Width="50" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
                 <TextBlock HorizontalAlignment="Center">动态更新</TextBlock>
 
                 <!--<Image MouseLeftButtonUp="breakPost_mouseup" Tag="sys" Name="sysMsgImg" Source="/Images/post/sysMsg.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
                 <TextBlock HorizontalAlignment="Center">系统消息</TextBlock>-->
 
-                <Image Tag="at" MouseLeftButtonUp="breakPost_mouseup" Name="atMeImg" Source="/Images/post/atMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <Image Tag="Atme2" MouseLeftButtonUp="breakPost_mouseup" Name="atMeImg" Source="/Images/post/atMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
                 <TextBlock HorizontalAlignment="Center">提到我的</TextBlock>
 
-                <Image Tag="reply" MouseLeftButtonUp="breakPost_mouseup" Name="replyMeImg" Source="/Images/post/replyMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+                <Image Tag="Replyme" MouseLeftButtonUp="breakPost_mouseup" Name="replyMeImg" Source="/Images/post/replyMe.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
                 <TextBlock HorizontalAlignment="Center">回复我的</TextBlock>
 
                 <!--<Image Tag="privateChat" MouseLeftButtonUp="breakPost_mouseup" Source="/Images/post/privateChat.png" Width="50" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>

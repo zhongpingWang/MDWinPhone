@@ -45,9 +45,9 @@
 
 
             <StackPanel Background="#FF0D143E" Width="100" HorizontalAlignment="Center" Height="800" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
- 
-                <Image Tag="at" MouseLeftButtonUp="add_post_Click" Name="atMeImg" Source="/Assets/AppBar/add_post.png" Width="50" Margin="0,620,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Image>
-                <TextBlock HorizontalAlignment="Center">发表动态</TextBlock>
+
+                <Image Tag="at" MouseLeftButtonUp="add_post_Click" Name="atMeImg" Source="/Images/post/replyMe.png" Width="50" Margin="0,620,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Image>
+                <TextBlock HorizontalAlignment="Center">回复动态</TextBlock>
 
             </StackPanel>
 

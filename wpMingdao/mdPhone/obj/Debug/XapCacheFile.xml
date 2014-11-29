@@ -1,5 +1,5 @@
-﻿<xapCache source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014/11/28 7:18:01">
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll" archivePath="mdPhone.dll" lastWriteTime="2014/11/28 7:17:58" />
+﻿<xapCache source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014/11/29 13:12:31">
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.dll" archivePath="mdPhone.dll" lastWriteTime="2014/11/29 13:12:28" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\1.png" archivePath="Assets\1.png" lastWriteTime="2014/11/8 22:45:56" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\2.jpg" archivePath="Assets\2.jpg" lastWriteTime="2014/11/8 23:03:22" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2014/7/20 17:42:14" />
@@ -78,12 +78,11 @@
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\yeah.png" archivePath="Assets\Emotions\mdPng\yeah.png" lastWriteTime="2014/10/25 17:14:44" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Emotions\mdPng\yw_thumb.png" archivePath="Assets\Emotions\mdPng\yw_thumb.png" lastWriteTime="2014/10/25 17:14:44" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Settings.png" archivePath="Assets\Settings.png" lastWriteTime="2014/11/8 14:51:25" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2014/7/20 17:42:14" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2014/7/20 17:42:14" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2014/7/20 17:42:14" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2014/7/20 17:42:14" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2014/7/20 17:42:14" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\config.xml" archivePath="config.xml" lastWriteTime="2014/11/18 22:36:41" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\MDFlipCycleTileLarge.png" archivePath="Assets\Tiles\MDFlipCycleTileLarge.png" lastWriteTime="2014/11/29 10:31:52" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\MDFlipCycleTileSmall.png" archivePath="Assets\Tiles\MDFlipCycleTileSmall.png" lastWriteTime="2014/11/29 10:34:33" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\MDIconicTileMediumLarge.png" archivePath="Assets\Tiles\MDIconicTileMediumLarge.png" lastWriteTime="2014/11/29 10:35:07" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\mdSmall.png" archivePath="Assets\Tiles\mdSmall.png" lastWriteTime="2014/8/30 21:54:39" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\config.xml" archivePath="config.xml" lastWriteTime="2014/11/28 21:04:26" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Images\login\bannerBg.png" archivePath="Images\login\bannerBg.png" lastWriteTime="2014/8/27 21:37:37" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Images\login\loginBg.png" archivePath="Images\login\loginBg.png" lastWriteTime="2014/8/27 22:33:02" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Images\login\mdIconLogin.png" archivePath="Images\login\mdIconLogin.png" lastWriteTime="2014/8/26 23:28:31" />
@@ -147,7 +146,7 @@
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="2014/7/24 22:47:29" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="2014/7/24 22:47:29" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="2014/7/24 22:47:28" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014/11/28 0:04:04" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014/11/29 13:07:44" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\ref\Coding4Fun.Phone.Controls.dll" archivePath="Coding4Fun.Phone.Controls.dll" lastWriteTime="2012/11/19 10:30:12" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\ref\Coding4Fun.Phone.Controls.Toolkit.dll" archivePath="Coding4Fun.Phone.Controls.Toolkit.dll" lastWriteTime="2012/11/19 10:30:12" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ICSharpCode.SharpZLib.Phone.dll" archivePath="ICSharpCode.SharpZLib.Phone.dll" lastWriteTime="2014/7/20 17:48:00" />
@@ -169,6 +168,7 @@
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Gif.xml" archivePath="ImageTools.IO.Gif.xml" lastWriteTime="2014/7/20 17:48:00" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Png.xml" archivePath="ImageTools.IO.Png.xml" lastWriteTime="2014/7/20 17:48:00" />
   <file source="F:\Project\WP8\MDWinphone\wpMingdao\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.xml" archivePath="ImageTools.Utils.xml" lastWriteTime="2014/7/20 17:48:00" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\mdSmall.png" archivePath="Assets\Tiles\mdSmall.png" lastWriteTime="2014/8/30 21:54:39" />
-  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014/11/28 0:04:04" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\MDFlipCycleTileMedium.png" archivePath="Assets\Tiles\MDFlipCycleTileMedium.png" lastWriteTime="2014/11/29 10:33:56" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Assets\Tiles\MDIconicTileSmall.png" archivePath="Assets\Tiles\MDIconicTileSmall.png" lastWriteTime="2014/11/29 10:44:17" />
+  <file source="F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014/11/29 13:07:44" />
 </xapCache>

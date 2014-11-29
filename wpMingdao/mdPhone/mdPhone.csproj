@@ -107,6 +107,7 @@
     <Compile Include="Helper\MDExpansion.cs" />
     <Compile Include="Helper\textConvert.cs" />
     <Compile Include="Helper\UserDataManager.cs" />
+    <Compile Include="Helper\XmlUtil.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -116,6 +117,7 @@
     <Compile Include="Model\passport\Unreadcount.cs" />
     <Compile Include="Model\post\PostEnum.cs" />
     <Compile Include="Model\post\Posts.cs" />
+    <Compile Include="Model\post\replyments.cs" />
     <Compile Include="Model\post\Tag.cs" />
     <Compile Include="Model\post\user.cs" />
     <Compile Include="Model\task\TaskInfo.cs" />
@@ -137,9 +139,6 @@
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
-    <Compile Include="View\about\about.xaml.cs">
-      <DependentUpon>about.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\apps\calendar\detail.xaml.cs">
       <DependentUpon>detail.xaml</DependentUpon>
     </Compile>
@@ -226,10 +225,6 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\about\about.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\apps\calendar\detail.xaml">
       <SubType>Designer</SubType>
@@ -422,21 +417,11 @@
     <Content Include="Assets\Emotions\mdPng\yeah.png" />
     <Content Include="Assets\Emotions\mdPng\yw_thumb.png" />
     <Content Include="Assets\Settings.png" />
-    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Tiles\IconicTileSmall.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\Tiles\MDFlipCycleTileLarge.png" />
+    <Content Include="Assets\Tiles\MDFlipCycleTileMedium.png" />
+    <Content Include="Assets\Tiles\MDFlipCycleTileSmall.png" />
+    <Content Include="Assets\Tiles\MDIconicTileMediumLarge.png" />
+    <Content Include="Assets\Tiles\MDIconicTileSmall.png" />
     <Content Include="Assets\Tiles\mdSmall.png" />
     <Content Include="config.xml">
       <SubType>Designer</SubType>

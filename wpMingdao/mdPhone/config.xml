@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<JPush>
-  <appkey>02d999277591d73240544c21</appkey>
-</JPush>
+<config>
+  <JPush>
+    <appkey>02d999277591d73240544c21</appkey>
+  </JPush>
+  <MDApi>
+    <appkey>68B09E2BA977</appkey>
+    <appsecret>614F752D97F0B667C9B0E52AD06752</appsecret>
+  </MDApi>
+</config>
 

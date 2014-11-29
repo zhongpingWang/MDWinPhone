@@ -103,17 +103,19 @@ namespace mdPhone.Helper
                 int i = 0;
                 foreach (string key in parameters.Keys)
                 {
-                    if (i > 0)
+                    //if (i > 0)
+                    if (url.IndexOf("?") > -1)
                     {
                         buffer.AppendFormat("&{0}={1}", key, parameters[key]);
                     }
                     else
                     {
-                        buffer.AppendFormat("{0}={1}", key, parameters[key]);
+                        buffer.AppendFormat("?{0}={1}", key, parameters[key]);
                     }
                     i++;
                 }
                 byte[] data = Encoding.UTF8.GetBytes(buffer.ToString());
+
                 //开始请求
                 request.BeginGetRequestStream(new AsyncCallback((ia) =>
                 {
@@ -129,15 +131,23 @@ namespace mdPhone.Helper
                         HttpWebRequest req = x.AsyncState as HttpWebRequest;
                         string responseStr = string.Empty;
 
-                        // 获取请求
-                        using (HttpWebResponse response = (HttpWebResponse)req.EndGetResponse(x))
+                        try
                         {
-                            // Get the response stream  
-                            StreamReader reader = new StreamReader(response.GetResponseStream());
-                            responseStr = reader.ReadToEnd();
-
+                            // 获取请求
+                            using (HttpWebResponse response = (HttpWebResponse)req.EndGetResponse(x))
+                            {
+                                // Get the response stream  
+                                StreamReader reader = new StreamReader(response.GetResponseStream());
+                                responseStr = reader.ReadToEnd(); 
+                            }
+                            callback(responseStr);
                         }
-                        callback(responseStr);
+                        catch (Exception)
+                        {
+                            
+                            throw;
+                        }
+                       
                     
                     }, request);
 
@@ -183,13 +193,14 @@ namespace mdPhone.Helper
                 int i = 0;
                 foreach (string key in parameters.Keys)
                 {
-                    if (i > 0)
+                   // if (i > 0)
+                    if (url.IndexOf("?") > -1)
                     {
                         buffer.AppendFormat("&{0}={1}", key, parameters[key]);
                     }
                     else
                     {
-                        buffer.AppendFormat("{0}={1}", key, parameters[key]);
+                        buffer.AppendFormat("?{0}={1}", key, parameters[key]);
                     }
                     i++;
                 }

@@ -13,6 +13,7 @@ namespace mdPhone.Model.post
        /// </summary>
        PostAll,
        Atme2,
+       Replyme,
        Replybyme
     }
 }

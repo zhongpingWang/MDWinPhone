@@ -339,11 +339,6 @@ H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.dll
 H:\2014\明道\wpMingdao\mdPhone\obj\Debug\mdPhone.pdb
 H:\2014\明道\wpMingdao\mdPhone\obj\Debug\XapCacheFile.xml
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\ApplicationIcon.png
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Assets\Tiles\IconicTileSmall.png
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\mdPhone.pdb
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\AppManifest.xaml
@@ -430,7 +425,6 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\zh-TW\Microsoft.Phone.Cont
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\App.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\Controls\ListBox2\ListBox2.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\Login.g.cs
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\about\about.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\detail.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\apps\calendar\main.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\apps\knowledge\main.g.cs
@@ -459,4 +453,3 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Newtonsoft.Json.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\userInfo.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\AccountSetting.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\post\ReplyPost.g.cs
-F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache
