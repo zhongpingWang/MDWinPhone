@@ -42,13 +42,13 @@
 
                 <Image  Source="/Assets/Settings.png" Width="36" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" MouseLeftButtonUp="loginOutSettings_MouseLeftButtonUp"></Image>
                 <TextBlock VerticalAlignment="Center" Margin="2,0,0,0" HorizontalAlignment="Left" Text="mingdao" Name="userName" Grid.Row="0" Grid.Column="1" MouseLeftButtonUp="loginOutSettings_MouseLeftButtonUp"></TextBlock>
-                <Image Name="refreshPassPort" Source="/Images/post/refresh.png" Width="36" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonUp="refreshPassPort_MouseLeftButtonUp"></Image>
+                <Image Name="refreshPassPort" Width="36" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonUp="refreshPassPort_MouseLeftButtonUp"></Image>
             </Grid> 
         </StackPanel>
 
 
         <StackPanel Grid.Row="2" VerticalAlignment="Center" >
-            <Image Width="128" Height="128"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="/Assets/1.png" MouseLeftButtonUp="uerImg_MouseLeftButtonUp_1">
+            <Image Width="128" Height="128"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"   MouseLeftButtonUp="uerImg_MouseLeftButtonUp_1">
                 <Image.Clip>
                     <EllipseGeometry Center="64,64" RadiusX="64" RadiusY="64" />
                 </Image.Clip>

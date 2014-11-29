@@ -25,6 +25,7 @@ namespace mdPhone.View.user
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ViewModel.UserInfoViewModel.UserDetail(getUserDetail);
             base.OnNavigatedTo(e);  
         }
 

@@ -51,7 +51,7 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle Grid.Row="0" Grid.Column="0" Margin="0,0,0,0"  Fill="White" RadiusX="5" RadiusY="5" >
                 </Rectangle>
-                <watermark:WatermarkedTextBox WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
+                <watermark:WatermarkedTextBox  WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
 
                 </watermark:WatermarkedTextBox>
                 <Border Height="1" VerticalAlignment="Top" Margin="0,75,0,0" Grid.Column="0" Grid.Row="0" Background="Black"></Border>
