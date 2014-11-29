@@ -15,24 +15,32 @@ namespace mdPhone.ViewModel
     {
           
         //用户登录
-        public static void UserLogin(string userEmail, string pwd,string projectId, HttpWeb.callbackResult callback)
+        public static void UserLogin(string userEmail, string pwd,string projectId, HttpWeb.callbackResult callback,string vCode="1234")
         {
             // 构建URL内容
             string uriStr = MDApi.loginUrl;//"https://api.mingdao.com/ajaxpage/authorizeAjax.aspx?type=GetRequestCode";//
 
-            Dictionary<string, string> dic = new Dictionary<string, string>() { 
+            Dictionary<string, string> dic = new Dictionary<string, string>() {  
                {"UserEmail",userEmail},
                {"UserPsw",pwd},
-               {"app_key",MDApi.app_key},//BE5472E1492BEFD650D6B4C71F101DCD
-               {"redirect_uri","http://www.baidu.com"},//E771069CB1159D197C9733ABF7D5F75
-               {"ProjectID",projectId},//fe288386-3d26-4eab-b5d2-51eeab82a7f9
-               {"appID",""},
-               {"chkCode",""},
-               {"state",""} 
+               {"app_key",MDApi.AppKey},//BE5472E1492BEFD650D6B4C71F101DCD
+               {"redirect_uri","http://www.baidu.com"},//E771069CB1159D197C9733ABF7D5F75 
+               {"ProjectID",projectId},//fe288386-3d26-4eab-b5d2-51eeab82a7f9  
+               {"appID",""}, 
+               {"state","0"},
+                {"chkCode",vCode}
             };
             //http请求
             HttpWeb.CreatePostHttpResponse(uriStr, dic, callback);
         }
+
+        //获取token
+        public static void GetChkCode(HttpWeb.callbackResult callback)
+        {
+            string uriStr ="https://api.mingdao.com/code.aspx?0.7088238715659827"; 
+            HttpWeb.CreateGetHttpResponse(uriStr, null, callback);
+        } 
+
 
         //获取token
         public static void GetUserToken(string code, HttpWeb.callbackResult callback)
@@ -40,8 +48,8 @@ namespace mdPhone.ViewModel
             string uriStr = MDApi.tokenUrl;// "https://api.mingdao.com/auth2/access_token?";
 
             Dictionary<string, string> dic = new Dictionary<string, string>() { 
-                   {"app_Key",MDApi.app_key},
-                   {"app_secret",MDApi.app_secret},
+                   {"app_Key",MDApi.AppKey},
+                   {"app_secret",MDApi.AppSecret},
                    {"grant_type","authorization_code"},
                    {"code",code},
                    {"redirect_uri","http://localhost:12136/authorize_callback"},

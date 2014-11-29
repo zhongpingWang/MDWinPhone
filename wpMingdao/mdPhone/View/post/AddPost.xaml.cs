@@ -57,8 +57,10 @@ namespace mdPhone.View.post
             {
                 Dispatcher.BeginInvoke(() =>
                 {
-                    MessageBox.Show("登录失效");
-                    NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+                    MessageBox.Show("发布失败");
+                    //NavigationService.Navigate(new Uri("/View/post/Post.xaml?type=PostAll", UriKind.Relative));
+                    //MessageBox.Show("登录失效");
+                    //NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
                 }); 
                 
             }

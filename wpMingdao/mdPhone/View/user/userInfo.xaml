@@ -50,7 +50,7 @@
 
                         <StackPanel Name="userBox" Visibility="Collapsed">
                             <StackPanel Grid.Row="2" VerticalAlignment="Center"  Orientation="Horizontal">
-                                <Image Width="64" Height="64"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="/Assets/1.png">
+                                <Image Width="64" Height="64"  Name="uerImg" VerticalAlignment="Center" HorizontalAlignment="Center">
                                     <Image.Clip>
                                         <EllipseGeometry Center="32,32" RadiusX="32" RadiusY="32" />
                                     </Image.Clip>

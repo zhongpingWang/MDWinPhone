@@ -25,9 +25,7 @@
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
             <ImageBrush ImageSource="/Images/login/loginBg.png"  Stretch="None"/>
-        </Grid.Background>
-
-        <TextBlock Width="100" Text="zhongping.Wang" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Name="mySelf" MouseLeftButtonUp="mySelf_MouseLeftButtonUp" Foreground="#FF5082B0" />
+        </Grid.Background> 
 
 
         <Grid x:Name="ContentPanel" HorizontalAlignment="Center" Width="400" ShowGridLines="False" Margin="40,80,40,194">
@@ -53,7 +51,7 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle Grid.Row="0" Grid.Column="0" Margin="0,0,0,0"  Fill="White" RadiusX="5" RadiusY="5" >
                 </Rectangle>
-                <watermark:WatermarkedTextBox WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
+                <watermark:WatermarkedTextBox  WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
 
                 </watermark:WatermarkedTextBox>
                 <Border Height="1" VerticalAlignment="Top" Margin="0,75,0,0" Grid.Column="0" Grid.Row="0" Background="Black"></Border>
@@ -75,6 +73,13 @@
             </Grid>
         </Grid> 
 
+        <StackPanel Name="vBox" Visibility="Collapsed" Margin="30,0,0,0" VerticalAlignment="Bottom" Orientation="Horizontal">
+            <TextBlock Height="32">验证码</TextBlock>
+            <TextBox Name="vCode" Width="120" FontSize="16" Margin="12,0,0,0" Height="32"></TextBox>
+            <Image Name="vImg" Height="32" Margin="12,0,0,0"  Source="" />
+        </StackPanel>
+        
+        
 
         <Grid x:Name="loginAnimate" Width="480"  Visibility="Collapsed"  HorizontalAlignment="Center"  ShowGridLines="False" Margin="0,0,0,0">
             <Grid.Background>

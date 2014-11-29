@@ -11,7 +11,12 @@ namespace mdPhone.ViewModel
 {
    public class PostViewModel
     {
-        //获取token
+        /// <summary>
+        /// 请求
+        /// </summary>
+        /// <param name="postEnum">类型</param>
+        /// <param name="parm">参数</param>
+        /// <param name="callback">回调</param>
        public static void GetUlity(PostEnum postEnum, Dictionary<string, string> parm, HttpWeb.callbackResult callback)
         {
             string uriStr = string.Empty;
@@ -22,15 +27,10 @@ namespace mdPhone.ViewModel
             else if (postEnum==PostEnum.Atme2)
             {
                  uriStr = MDApi.Atme2;
-            } else if (postEnum==PostEnum.Replybyme)
+            } else if (postEnum==PostEnum.Replyme)
             {
-                uriStr = MDApi.Replybyme;
+                uriStr = MDApi.Replyme;
             }
-            //Dictionary<string, string> parm = new Dictionary<string, string>() 
-            //{ 
-            //    {"pagesize",pageSize},
-            //     {"since_id",since_id}
-            //}; 
             HttpWeb.CreateGetHttpResponse(uriStr, parm, callback);
         }
 

@@ -16,6 +16,7 @@ using System.Text;
 using System.Runtime.Serialization.Json;
 using mdPhone.Helper;
 using System.IO.IsolatedStorage;
+using System.Windows.Media.Imaging;
 
 namespace mdPhone
 {
@@ -99,8 +100,9 @@ namespace mdPhone
             //加载动画
            // ImageTools.IO.Decoders.AddDecoder<GifDecoder>();
            // Image1.Source = new ExtendedImage() { UriSource = new Uri("/Images/loading.gif", UriKind.Relative) };//Local animated gif image binding with ImageTools
+            string vcode = vCode.Text.Trim();
             //用户登录
-            LoginViewModel.UserLogin(userEmail, pwd, "", LoginResult); 
+            LoginViewModel.UserLogin(userEmail, pwd, "", LoginResult, vcode); 
         } 
         
         public void LoginResult(string responseStr)
@@ -132,11 +134,19 @@ namespace mdPhone
                 UserDataManager.SaveUserInformation(login);
                 ms.Close();
                 ms.Dispose();
-                if (login.type == 1)
+                if (login.type == 1 || login.type == 7 || login.type == 8)
                 {
                     Dispatcher.BeginInvoke(() =>
                     {
                         MessageBox.Show(login.error);
+                        //if (login.type==7)
+                        //{
+                        //    LoginViewModel.GetChkCode((x) => { 
+                        //    });
+                        //    Uri uri = new Uri("https://api.mingdao.com/code.aspx?0.7088238715659827", UriKind.Absolute);
+                        //    vImg.Source = new BitmapImage(uri);
+                        //    vBox.Visibility = Visibility.Visible; 
+                        //}
                         loginAnimate.Visibility = Visibility.Collapsed;
                     });
                 }
@@ -230,12 +240,7 @@ namespace mdPhone
             string pwd = this.txtPasswrod.Password;
             txtPassWordTip.Visibility = Visibility.Collapsed;
         }
-
-        private void mySelf_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        { 
-            txtUserEmail.Text = "zhongping.wang@mingdao.com"; 
-            txtPasswrod.Password = "lovezhongping123"; 
-        } 
-
+         
+      
     }
 }

@@ -3,13 +3,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace mdPhone.Helper
 {
     public static class MDApi
     {
-        public static string app_key = "68B09E2BA977";
-        public static string app_secret = "614F752D97F0B667C9B0E52AD06752";
+
+        private static string _appKey=null;
+
+        public static string AppKey
+        {
+            get {
+                if (MDApi._appKey == null)
+                {
+                    Uri uri = new Uri("config.xml", UriKind.Relative);
+                    var configDoc = XDocument.Load(uri.ToString());
+                    var configAppkey = configDoc.Element("config").Element("MDApi").Element("appkey").Value;
+
+                    if (!string.IsNullOrEmpty(configAppkey.ToString()))
+                    {
+                        MDApi._appKey = configAppkey.ToString();
+                    }
+                } 
+                return MDApi._appKey;
+            
+            
+            }
+            set { MDApi._appKey = value; }
+        }
+
+
+        private static string _appSecret=null;
+
+        public static string AppSecret
+        {
+            get
+            {
+                if (MDApi._appSecret == null)
+                {
+                    Uri uri = new Uri("config.xml", UriKind.Relative);
+                    var configDoc = XDocument.Load(uri.ToString());
+                    var configAppkey = configDoc.Element("config").Element("MDApi").Element("appsecret").Value;
+
+                    if (!string.IsNullOrEmpty(configAppkey.ToString()))
+                    {
+                        MDApi._appSecret = configAppkey.ToString();
+                    }
+                }
+                return MDApi._appSecret;
+            }
+            set { MDApi._appSecret = value; }
+        } 
+     
         //登陆
        public static string loginUrl = "https://api.mingdao.com/ajaxpage/authorizeAjax.aspx?type=GetRequestCode";
         
@@ -68,7 +114,15 @@ namespace mdPhone.Helper
            get { return AddTokenFormatJson(MDApi._replybyme); }
            set { MDApi._replybyme = value; }
        }
-           
+
+       private static string _replyme = "https://api.mingdao.com/post/replyme";
+
+       public static string Replyme
+       {
+           get { return AddTokenFormatJson(MDApi._replyme); }
+           set { MDApi._replyme = value; }
+       }
+
 
 
 
