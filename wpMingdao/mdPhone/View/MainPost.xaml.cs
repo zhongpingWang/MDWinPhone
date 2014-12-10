@@ -18,6 +18,7 @@ using System.IO;
 using System.Text;
 using System.Runtime.Serialization.Json;
 using ImageTools;
+using mdPhone.Model.error;
 
 namespace mdPhone.View
 {
@@ -33,7 +34,7 @@ namespace mdPhone.View
         {  
             UserInfo user = UserDataManager.LoadUserSettings();
             userName.Text = user.username;
-            companyName.Text = user.CompanyName;
+            companyName.Text = user.CompanyName; 
             Dispatcher.BeginInvoke(() =>
             {
                 uerImg.Source = new BitmapImage(new Uri(user.userimage));
@@ -60,6 +61,11 @@ namespace mdPhone.View
             {
                 Dispatcher.BeginInvoke(() =>
                {
+                   errorStatus errorStatus = new errorStatus();
+                   MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(resutlt));
+                   DataContractJsonSerializer ser = new DataContractJsonSerializer(errorStatus.GetType());
+                   errorStatus = ser.ReadObject(ms) as errorStatus;
+                   App.mdStatus = errorStatus.error_code;
                    NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
                });
             }

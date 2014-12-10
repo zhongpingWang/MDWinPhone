@@ -51,11 +51,11 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle Grid.Row="0" Grid.Column="0" Margin="0,0,0,0"  Fill="White" RadiusX="5" RadiusY="5" >
                 </Rectangle>
-                <watermark:WatermarkedTextBox  WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
+                <watermark:WatermarkedTextBox Text="zhongping.wang@mingdao.com"  WatermarkStyle="{StaticResource emailTipStyle}"  FontWeight="Normal" Padding="0,0,0,0" FontSize="18" Height="50" Name="txtUserEmail" Grid.Row="0"  Margin="0,15,0,0" Grid.Column="0"   Watermark="邮箱"  CaretBrush="Black" Foreground="Black" SelectionBackground="Black" SelectionForeground="Black"  BorderBrush="White"  VerticalAlignment="Top" >
 
                 </watermark:WatermarkedTextBox>
                 <Border Height="1" VerticalAlignment="Top" Margin="0,75,0,0" Grid.Column="0" Grid.Row="0" Background="Black"></Border>
-                <PasswordBox BorderBrush="{x:Null}" Width="380" Height="50" VerticalAlignment="Top" Canvas.ZIndex="2" Name="txtPasswrod"  
+                <PasswordBox Password="lovezhongping123" BorderBrush="{x:Null}" Width="380" Height="50" VerticalAlignment="Top" Canvas.ZIndex="2" Name="txtPasswrod"  
                         Grid.Row="0" Grid.Column="0"  
                          Margin="0,90,0,0" Background="{x:Null}" SelectionBackground="{x:Null}" SelectionForeground="{x:Null}" GotFocus="txtPasswrod_GotFocus" LostFocus="txtPasswrod_LostFocus" >
                 </PasswordBox>

@@ -17,6 +17,7 @@ using System.Runtime.Serialization.Json;
 using mdPhone.Helper;
 using System.IO.IsolatedStorage;
 using System.Windows.Media.Imaging;
+using mdPhone.Model.error;
 
 namespace mdPhone
 {
@@ -56,12 +57,15 @@ namespace mdPhone
             loginAnimate.Visibility = Visibility.Collapsed;
             manyProject.Visibility = Visibility.Collapsed;
             login.Visibility = Visibility.Visible;
-           
 
+            if (string.IsNullOrEmpty(App.mdStatus))
+            {
+                App.mdStatus = "";
+            } 
             if (e.NavigationMode == NavigationMode.New)
             { 
                 UserInfo user = UserDataManager.LoadUserSettings();
-                if (user != null && user.RememberPwd && !string.IsNullOrEmpty(user.Token))
+                if (user != null && user.RememberPwd && !string.IsNullOrEmpty(user.Token) &&  App.mdStatus!="10101")
                 {
                     loginAnimate.Visibility = Visibility.Visible;
                     App.Token = user.Token;

@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="Model\calendar\calendarList.cs" />
     <Compile Include="Model\calendar\calendars.cs" />
+    <Compile Include="Model\error\errorStatus.cs" />
     <Compile Include="Model\passport\Unreadcount.cs" />
     <Compile Include="Model\post\PostEnum.cs" />
     <Compile Include="Model\post\Posts.cs" />

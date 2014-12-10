@@ -43,6 +43,10 @@ namespace mdPhone
             set { App._token = value; }
         }
 
+
+        public static string mdStatus { get; set; }
+
+
         /// <summary>
         ///提供对电话应用程序的根框架的轻松访问。
         /// </summary>

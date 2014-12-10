@@ -453,3 +453,4 @@ F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\Bin\Debug\Newtonsoft.Json.dll
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\userInfo.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\user\AccountSetting.g.cs
 F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\View\post\ReplyPost.g.cs
+F:\Project\WP8\MDWinphone\wpMingdao\mdPhone\obj\Debug\mdPhone.csprojResolveAssemblyReference.cache
