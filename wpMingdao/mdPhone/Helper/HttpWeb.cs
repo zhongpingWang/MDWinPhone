@@ -37,7 +37,7 @@ namespace mdPhone.Helper
             //http 标头
             request.ContentType = "application/x-www-form-urlencoded";
          
-            request.UserAgent = DefaultUserAgent;
+            //request.UserAgent = DefaultUserAgent; 
             //参数
             if (!(parameters == null || parameters.Count == 0))
             {
@@ -95,7 +95,7 @@ namespace mdPhone.Helper
             //http 标头
             request.ContentType = "application/x-www-form-urlencoded";
 
-            request.UserAgent = DefaultUserAgent;
+            //request.UserAgent = DefaultUserAgent;
             //参数
             if (!(parameters == null || parameters.Count == 0))
             {

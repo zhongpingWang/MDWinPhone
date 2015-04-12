@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ZHONGPING</Machine>
+    <WindowsUser>zhong_000</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>c7ba9dd6-06f9-49bd-8c62-0dd573f9a191</PackageIdentityName>
+    <IntermediateOutputPath>F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\wpWebViewMingdao.exe">
+      <PackagePath>wpWebViewMingdao.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.Common.winmd">
+      <PackagePath>Microsoft.Advertising.Mobile.Common.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.Display.winmd">
+      <PackagePath>Microsoft.Advertising.Mobile.Display.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.winmd">
+      <PackagePath>Microsoft.Advertising.Mobile.UI.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\dll\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI\Web\bootstrap.html">
+      <PackagePath>Microsoft.Advertising.Mobile.UI\Web\bootstrap.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Advertising.Mobile.UI\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Advertising.Mobile.Display\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI\Web\Ormma.js">
+      <PackagePath>Microsoft.Advertising.Mobile.UI\Web\Ormma.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\images\login\bannerBg.png">
+      <PackagePath>Html\images\login\bannerBg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\images\login\loginBg.png">
+      <PackagePath>Html\images\login\loginBg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\images\login\mdIconLogin.png">
+      <PackagePath>Html\images\login\mdIconLogin.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\dll\Newtonsoft.Json.dll">
+      <PackagePath>dll\Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\css\base.css">
+      <PackagePath>Html\css\base.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\css\login.css">
+      <PackagePath>Html\css\login.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\css\phone.css">
+      <PackagePath>Html\css\phone.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\index.html">
+      <PackagePath>Html\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\login.html">
+      <PackagePath>Html\login.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\javascript\logo.js">
+      <PackagePath>Html\javascript\logo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\mdScript\config.js">
+      <PackagePath>Html\mdScript\config.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\mdScript\jquery-1.11.2.min.js">
+      <PackagePath>Html\mdScript\jquery-1.11.2.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\Html\mdScript\mdScript.js">
+      <PackagePath>Html\mdScript\mdScript.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\wpWebViewMingdao.xr.xml">
+      <PackagePath>wpWebViewMingdao.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Project\WP8\MDWinphone\wpWebViewMingdao\wpWebViewMingdao\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

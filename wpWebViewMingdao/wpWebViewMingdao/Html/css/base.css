@@ -1,0 +1,69 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, sans-serif; touch-action: pan-y;
+       -moz-user-select: none; /*火狐*/
+
+-webkit-user-select: none; /*webkit浏览器*/
+
+-ms-user-select: none; /*IE10*/
+
+-khtml-user-select: none; /*早期浏览器*/
+
+user-select: none;
+
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+
+/* alert提示框 */
+#alertDialog 
+{
+    position:fixed;*position:absolute;background-color:#cffbc7;color:green;padding:10px 40px 10px 20px;text-align:left;font-size:20px;border:2px solid #fff;border:2px solid #eee\9;
+	-moz-border-radius:7px;-moz-box-shadow:0 0 40px #000;box-shadow:0 0 40px #000;-webkit-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 0 40px #ccc;z-index:99999;
+}
+#alertDialog .close 
+{
+	position:absolute;right:10px;top:12px;color:#190;background-color:#fff;display:block;width:20px;height:20px;text-align:center;
+	overflow:hidden;font-size:20px;line-height:16px;line-height:20px\9;font-weight:bold;border-radius:12px;-moz-border-radius:12px;-webkit-border-radius:12px;
+	text-decoration:none;
+}
+.errorDialog {background-color:#FD7E71!important;color:#c10!important;}
+.errorDialog .close {color:#FD7E71!important;}
+.warningDialog {background-color:#fbeac7!important;color:#d80!important;}
+.warningDialog .close {color:#fbeac7!important;}
+.warningErrorDialog {background-color:#ececec!important;color:#333!important;}
+.warningErrorDialog .close {color:#ececec!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+

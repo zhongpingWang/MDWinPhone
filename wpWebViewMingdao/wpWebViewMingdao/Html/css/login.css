@@ -1,0 +1,47 @@
+﻿body {
+    background-color: #5188B1;
+    text-align: center; 
+   
+}
+
+#siteBox {
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo {
+    width: 60px;
+    margin-top: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.txtInput {
+    width: 85%;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    font-size: 16px;
+    padding-left: 6px;
+}
+
+#txtUserName {
+    margin-top: 30px;
+}
+
+#txtPwd {
+    border-top: 0px;
+}
+
+#btnLogin {
+    width: 85%;
+    height: 38px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    line-height: 38px;
+    font-size: 18px;
+    color: #333;
+}
